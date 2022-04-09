@@ -4,7 +4,7 @@ import {
 import { useState } from 'react';
 import Actions from './Actions';
 
-function Product({ isStart, isEnd }) {
+function Product({ isEnd }) {
   const [isOver, setOver] = useState(false);
   const handleMouseOver = () => {
     setOver(true);
@@ -14,8 +14,15 @@ function Product({ isStart, isEnd }) {
   };
   return (
 
-    <Box component="div" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} borderLeft={`${isStart ? '0px' : '1px'} solid #ededed`} borderBottom={`${isEnd ? '0px' : '1px'} solid #ededed`}>
-      <Box component="img" width="100%" height="auto" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
+    <Box
+      component="div"
+      onMouseOver={handleMouseOver}
+      onMouseLeave={handleMouseLeave}
+      borderBottom={`${isEnd ? '0px' : '1px'} solid #ededed`}
+      display="flex"
+    >
+      <Box component="img" maxWidth="250px" maxHeight="200px" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
+
       <Box py="1rem" px="0.5rem">
         <Typography>Alcatra porkchop venison</Typography>
         <Rating name="size-small" defaultValue={2} size="small" />

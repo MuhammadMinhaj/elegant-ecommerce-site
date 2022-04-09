@@ -5,7 +5,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 
-function ViewFilter() {
+function ViewFilter({ handleClickToViewChange }) {
   const [age, setAge] = useState(25);
 
   const handleChange = (event) => {
@@ -26,11 +26,11 @@ function ViewFilter() {
         <MenuItem value={100}>100</MenuItem>
       </Select>
       <Box display="flex" alignItems="center">
-        <IconButton size="small">
+        <IconButton size="small" onClick={() => handleClickToViewChange(false)}>
           <TableRowsIcon />
         </IconButton>
         <Box height="1.25rem" width="1px" bgcolor="#d1d1d1" />
-        <IconButton size="small">
+        <IconButton size="small" onClick={() => handleClickToViewChange(true)}>
           <GridViewSharpIcon />
         </IconButton>
       </Box>
