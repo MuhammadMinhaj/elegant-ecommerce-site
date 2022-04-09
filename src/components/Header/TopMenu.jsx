@@ -8,7 +8,6 @@ import {
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Dropd from 'react-dropd';
-import siteLogo from '../../assets/images/site-logo.png';
 
 function TopMenu() {
   return (
@@ -107,7 +106,7 @@ function TopMenu() {
         <Container className="st-container text-sm-center">
           <Row>
             <Col sm={12} xl={3} className="py-2">
-              <img src={siteLogo} className="site-logo" alt="site-logo" />
+              <img src="/images/site-logo.png" className="site-logo" alt="site-logo" />
             </Col>
             <Col sm={12} xl={6}>
               <div className="dropdown-wrapper py-2">
