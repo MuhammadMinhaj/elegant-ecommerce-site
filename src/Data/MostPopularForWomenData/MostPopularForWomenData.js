@@ -1,0 +1,62 @@
+const MostPopularForWomenData = [
+  {
+    id: 1,
+    name: "Gift Black Ser",
+    quality: "Black friday",
+    price: 270,
+    discount: "- 20%",
+    img: "https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/11/retail-black-friday-product-11-opt-174x178.jpg",
+  },
+  {
+    id: 2,
+    name: "Behuizingen Met",
+    quality: "Black friday",
+    price: 170,
+    img: "https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/11/retail-black-friday-product-12-opt-174x178.jpg",
+  },
+  {
+    id: 3,
+    name: "Proenza",
+    quality: "Black friday",
+    price: 200,
+    img: "https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/11/retail-black-friday-product-13-opt-174x178.jpg",
+  },
+  {
+    id: 4,
+    name: "Pocket Termosu",
+    quality: "Black friday",
+    price: 270,
+    discount: "new",
+    img: "https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/11/retail-black-friday-product-14-opt-174x178.jpg",
+  },
+  {
+    id: 5,
+    name: "Gift Black Ser",
+    quality: "Black friday",
+    price: 270,
+    img: "https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/11/retail-black-friday-product-15-opt-174x178.jpg",
+  },
+  {
+    id: 6,
+    name: "Behuizingen Met",
+    discount: "- 30%",
+    quality: "Black friday",
+    price: 170,
+    img: "https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/11/retail-black-friday-product-16-opt-174x178.jpg",
+  },
+  {
+    id: 7,
+    name: "Proenza",
+    quality: "Black friday",
+    price: 200,
+    img: "https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/11/retail-black-friday-product-18-opt-174x178.jpg",
+  },
+  {
+    id: 8,
+    name: "Pocket Termosu",
+    quality: "Black friday",
+    price: 270,
+    img: "https://z9d7c4u6.rocketcdn.me/wp-content/uploads/2018/11/retail-black-friday-product-19-opt-174x178.jpg",
+  },
+];
+export default MostPopularForWomenData;
