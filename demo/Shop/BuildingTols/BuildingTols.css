@@ -1,0 +1,15 @@
+.building_left_inner {
+  background-color: #e4b625;
+}
+
+.build_tools_inner {
+  background-color: #fff;
+  text-align: center;
+  margin: 2px 0;
+  padding: 3px 0;
+  cursor: pointer;
+}
+.build_tools_inner p {
+  margin: 0;
+  font-size: 14px;
+}

@@ -1,0 +1,18 @@
+.ElectronicCategory {
+  padding: 40px 0;
+}
+.electronic_category_inner {
+  cursor: pointer;
+  text-align: center;
+}
+.electronic_category_inner img {
+  width: 200px;
+}
+
+.electronic_category_inner p {
+  margin: 0;
+}
+.electronic_category_inner .product_item {
+  font-size: 14px;
+  color: #999;
+}

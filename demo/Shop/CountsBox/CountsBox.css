@@ -1,0 +1,23 @@
+.counter_section {
+  background-color: rgb(83, 134, 83);
+  padding: 20px 0;
+  color: #fff;
+}
+
+.count_inner {
+  text-align: center;
+  /* border: 1px solid #fff; */
+  display: flex;
+  align-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.count_inner i {
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: coral;
+}
