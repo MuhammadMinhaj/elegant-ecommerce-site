@@ -2,9 +2,9 @@ import {
   ArrowUpward as ArrowUp,
   FavoriteBorderOutlined as HeartIcon,
   MenuOutlined as MenuIcon,
-  PersonOutlined as PersonIcon
+  PersonOutlined as PersonIcon,
+  ShoppingCart
 } from '@mui/icons-material';
-import Link from 'next/link';
 import React, { Component } from 'react';
 import {
   Col, Container, Nav, Navbar, Row
@@ -98,27 +98,27 @@ class MainMenu extends Component {
 
                         <ul className="nav nav-right">
                           <li className="sticky-show">
-                            <Link
+                            <a
                               href="/wishlist"
                             >
                               <HeartIcon />
-                            </Link>
+                            </a>
                           </li>
                           <li className="sticky-show">
-                            <Link
+                            <a
                               href="/login"
                             >
                               <PersonIcon />
-                            </Link>
+                            </a>
                           </li>
-                          {/* <li className="sticky-show cart-item">
-                            <Link
+                          <li className="sticky-show cart-item">
+                            <a
                               href="/cart"
                             >
                               <ShoppingCart />
                               <span className="item-count">5</span>
-                            </Link>
-                          </li> */}
+                            </a>
+                          </li>
                         </ul>
                       </Nav>
                     </Navbar.Collapse>

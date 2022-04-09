@@ -105,7 +105,7 @@ function TopMenu() {
       <div className="middle-bar">
         <Container className="st-container text-sm-center">
           <Row>
-            <Col sm={12} xl={3} className="py-2">
+            <Col sm={12} xl={3} className="py-2 text-center">
               <img src="/images/site-logo.png" className="site-logo" alt="site-logo" />
             </Col>
             <Col sm={12} xl={6}>
@@ -140,8 +140,8 @@ function TopMenu() {
               </div>
             </Col>
             <Col sm={12} xl={3}>
-              <div className="right-icon-wrapper py-2">
-                <div className="icon-flex-wrapper">
+              <div className="right-icon-wrapper h-100 py-2">
+                <div className="icon-flex-wrapper h-100">
                   <div className="icon-box ">
                     <HeartIcon />
                   </div>

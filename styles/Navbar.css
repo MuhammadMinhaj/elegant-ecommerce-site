@@ -84,6 +84,7 @@
 .main-menu .navbar {
   padding: 0px 0px;
   position: relative;
+  z-index: 999;
 }
 .main-menu .navbar .navbar-main li a {
   font-size: 14px;
