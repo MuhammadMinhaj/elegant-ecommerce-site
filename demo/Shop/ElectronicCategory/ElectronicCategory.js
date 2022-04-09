@@ -1,18 +1,15 @@
-import React from "react";
-import "./ElectronicCategory.css";
-import ElectronicCategoryData from "../../../Data/ElectronicCategoryData/ElectronicCategoryData";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
+import React from 'react';
 // import "./styles.css";
-
 // import required modules
-import { FreeMode } from "swiper";
+import { FreeMode } from 'swiper';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import ElectronicCategoryData from '../../../Data/ElectronicCategoryData/ElectronicCategoryData';
+import './ElectronicCategory.css';
 
-const ElectronicCategory = () => {
+function ElectronicCategory() {
   return (
     <div>
       <div className="container">
@@ -21,9 +18,9 @@ const ElectronicCategory = () => {
           <Swiper
             slidesPerView={5}
             spaceBetween={30}
-            freeMode={true}
+            freeMode
             pagination={{
-              clickable: true,
+              clickable: true
             }}
             modules={[FreeMode]}
             className="mySwiper"
@@ -48,6 +45,6 @@ const ElectronicCategory = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ElectronicCategory;
