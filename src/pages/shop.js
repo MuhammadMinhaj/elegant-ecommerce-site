@@ -1,5 +1,6 @@
 import Layout from '../components/Layout/Layout';
 import AllCategories from '../components/Shop/AllCategories/AllCategories';
+import BuildingTools from '../components/Shop/BuildingTools/BuildingTools';
 import DiscountOffer from '../components/Shop/DiscountOffer/DiscountOffer';
 import DiscountOnAllProduct from '../components/Shop/DiscountOffer/DiscountOnAllProduct';
 import ElectronicCategory from '../components/Shop/ElectronicCategory/ElectronicCategory';
@@ -19,7 +20,7 @@ function ShopPage() {
       <DiscountOffer />
       <DiscountOnAllProduct />
       <DiscountOffer />
-
+      <BuildingTools />
     </Layout>
   );
 }
