@@ -1,10 +1,12 @@
 import { Box, Grid } from '@mui/material';
-import Filter from './Filter';
+import BreadCrumbs from './BreadCrumbs';
+import Filter from './Filter/Filter';
 import Products from './Product/Products';
 
 function DynamicCategory() {
   return (
-    <Box className="container" py="2rem">
+    <Box className="container" pb="1rem">
+      <BreadCrumbs />
       <Grid container spacing={2}>
         <Grid item xs={12} sm={12} md={4} lg={3}>
           <Filter />
