@@ -1,7 +1,9 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import TopCategory from '../Categories/TopCategory';
-import FeaturedProduct from '../Product/FeaturedProduct/FeaturedProduct';
+import DropShippingWork from '../DropShippingWork/DropShippingWork';
 import Slider from '../Slider/Slider';
+import BestSellers from '../Store/BestSellers/BestSellers';
+import FeaturedProduct from '../Store/FeaturedProduct/FeaturedProduct';
 import FeatureStrip from './FeatureStrip';
 
 function Home() {
@@ -22,7 +24,8 @@ function Home() {
           </Row>
         </Container>
       </div>
-
+      <DropShippingWork />
+      <BestSellers />
     </div>
   );
 }
