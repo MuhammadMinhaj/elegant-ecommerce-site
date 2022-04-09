@@ -1,0 +1,26 @@
+.top_slider_full_area {
+  padding: 5px;
+}
+.side_menu_area ul li {
+  padding: 7px 0;
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
+.side_menu_area ul li:hover {
+  background-color: rgb(236, 236, 236);
+  padding-left: 10px;
+}
+.slider_img img {
+  max-height: 350px;
+  margin-top: 10px;
+}
+
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #ddd;
+  border-radius: 50%;
+} */
+
+/* .carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: black;
+} */
