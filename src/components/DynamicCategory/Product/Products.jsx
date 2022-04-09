@@ -1,5 +1,5 @@
 import { Box, Divider, Grid } from '@mui/material';
-import Item from './Item/Item';
+import GridItem from './Item/GridItem';
 import ViewFilter from './ViewFilter';
 
 function DynamicCategory() {
@@ -9,14 +9,14 @@ function DynamicCategory() {
       <Divider />
       <Box p="1rem">
         <Grid container>
-          <Item isStart />
-          <Item />
-          <Item />
-          <Item />
-          <Item isStart isEnd />
-          <Item isEnd />
-          <Item isEnd />
-          <Item isEnd />
+          <GridItem isStart />
+          <GridItem />
+          <GridItem />
+          <GridItem />
+          <GridItem isStart isEnd />
+          <GridItem isEnd />
+          <GridItem isEnd />
+          <GridItem isEnd />
         </Grid>
       </Box>
 

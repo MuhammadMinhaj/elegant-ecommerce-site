@@ -7,13 +7,16 @@ import Actions from './Actions';
 function Product({ isStart, isEnd }) {
   const [isOver, setOver] = useState(false);
   const handleMouseOver = () => {
-    setOver(!setOver);
+    setOver(true);
+  };
+  const handleMouseLeave = () => {
+    setOver(false);
   };
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
-      <Box component="div" onMouseOver={handleMouseOver} borderLeft={`${isStart ? '0px' : '1px'} solid #ededed`} borderBottom={`${isEnd ? '0px' : '1px'} solid #ededed`}>
+      <Box component="div" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} borderLeft={`${isStart ? '0px' : '1px'} solid #ededed`} borderBottom={`${isEnd ? '0px' : '1px'} solid #ededed`}>
         <Box component="img" width="100%" height="auto" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
-        <Box py="2rem" px="0.5rem">
+        <Box py="1rem" px="0.5rem">
           <Typography>Alcatra porkchop venison</Typography>
           <Rating name="size-small" defaultValue={2} size="small" />
           <Box>
@@ -25,7 +28,7 @@ function Product({ isStart, isEnd }) {
             </Box>
           </Box>
           <Grow in={isOver}>
-            <Box>
+            <Box py="1rem">
               <Actions />
             </Box>
           </Grow>
