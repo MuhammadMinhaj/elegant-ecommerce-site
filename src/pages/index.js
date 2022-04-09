@@ -1,8 +1,12 @@
+import Home from '../components/Home/Home';
+import Layout from '../components/Layout/Layout';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div>
-      Welcome to dropship
-    </div>
+    <Layout>
+      <div>
+        <Home />
+      </div>
+    </Layout>
   );
 }

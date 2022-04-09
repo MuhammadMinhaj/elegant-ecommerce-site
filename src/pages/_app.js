@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { createWrapper } from 'next-redux-wrapper';
 import App from 'next/app';
 import { Provider } from 'react-redux';
