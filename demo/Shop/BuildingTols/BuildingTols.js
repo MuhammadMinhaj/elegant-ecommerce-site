@@ -1,11 +1,11 @@
-import React from "react";
-import "./BuildingTols.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import BuildingToolsData from '../../../Data/BuildingToolsData/BuildingToolsData';
+import building_img from '../../../Images/MostPopularForMan/building_tols.jpg';
+import './BuildingTols.css';
 
-import building_img from "../../../Images/MostPopularForMan/building_tols.jpg";
-import { Link } from "react-router-dom";
-import BuildingToolsData from "../../../Data/BuildingToolsData/BuildingToolsData";
 
-const BuildingTols = () => {
+function BuildingTols() {
   return (
     <div className="py-3 my-3">
       <div className="container">
@@ -77,7 +77,10 @@ const BuildingTols = () => {
                             <img src={item?.img} alt="" />
                             <p>{item?.name}</p>
                             <p>{item?.brand}</p>
-                            <p>${item?.price}</p>
+                            <p>
+                              $
+                              {item?.price}
+                            </p>
                           </div>
                         </div>
                       ))}
@@ -96,7 +99,10 @@ const BuildingTols = () => {
                             <img src={item?.img} alt="" />
                             <p>{item?.name}</p>
                             <p>{item?.brand}</p>
-                            <p>${item?.price}</p>
+                            <p>
+                              $
+                              {item?.price}
+                            </p>
                           </div>
                         </div>
                       ))}
@@ -115,7 +121,10 @@ const BuildingTols = () => {
                             <img src={item?.img} alt="" />
                             <p>{item?.name}</p>
                             <p>{item?.brand}</p>
-                            <p>${item?.price}</p>
+                            <p>
+                              $
+                              {item?.price}
+                            </p>
                           </div>
                         </div>
                       ))}
@@ -129,6 +138,6 @@ const BuildingTols = () => {
       </div>
     </div>
   );
-};
+}
 
 export default BuildingTols;
