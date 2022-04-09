@@ -3,7 +3,9 @@
 @import url("./homepage.css");
 @import url("./Account.css");
 @import url("./Footer.css");
-
+:root {
+  --white: #fff;
+}
 html,
 body {
   padding: 0;
