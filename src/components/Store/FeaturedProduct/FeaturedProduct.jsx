@@ -6,7 +6,7 @@ import {
   StarHalf
 } from '@mui/icons-material';
 import Slider from 'react-slick';
-import FPItem from './FPItem';
+import HomeProduct from '../Common/HomeProduct';
 
 function FeaturedProduct({ title }) {
   const settings = {
@@ -89,11 +89,11 @@ function FeaturedProduct({ title }) {
           </div>
         </div>
 
-        <FPItem title="Baseballl Bat" imgSrc="/images/category-two.jpg" discount="30%" price="$39.00" />
-        <FPItem title="Black Grey Headset" imgSrc="/images/category-three.jpg" discount="30%" price="$39.00" />
-        <FPItem title="Baseballl Bat" imgSrc="/images/category-four.jpg" discount="30%" price="$39.00" />
-        <FPItem title="Black Grey Headset" imgSrc="/images/category-five.jpg" discount="30%" price="$39.00" />
-        <FPItem title="Baseballl Bat" imgSrc="/images/category-six.jpg" discount="30%" price="$39.00" />
+        <HomeProduct title="Baseballl Bat" imgSrc="/images/category-two.jpg" discount="30%" price="$39.00" />
+        <HomeProduct title="Black Grey Headset" imgSrc="/images/category-three.jpg" discount="30%" price="$39.00" />
+        <HomeProduct title="Baseballl Bat" imgSrc="/images/category-four.jpg" discount="30%" price="$39.00" />
+        <HomeProduct title="Black Grey Headset" imgSrc="/images/category-five.jpg" discount="30%" price="$39.00" />
+        <HomeProduct title="Baseballl Bat" imgSrc="/images/category-six.jpg" discount="30%" price="$39.00" />
       </Slider>
     </div>
   );
