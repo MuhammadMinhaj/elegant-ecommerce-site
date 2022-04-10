@@ -1,11 +1,19 @@
-import { Box } from '@mui/material';
+import { FavoriteBorder as FavoriteBorderIcon, PersonOutline as PersonOutlineIcon, ShoppingBasket as ShoppingBasketIcon } from '@mui/icons-material';
+import { Box, IconButton } from '@mui/material';
 
 function Actions() {
   return (
-    <Box>
-      <Box className="container">
-        Actions
-      </Box>
+    <Box display="flex">
+      <IconButton>
+        <FavoriteBorderIcon />
+      </IconButton>
+
+      <IconButton>
+        <PersonOutlineIcon />
+      </IconButton>
+      <IconButton>
+        <ShoppingBasketIcon />
+      </IconButton>
     </Box>
   );
 }
