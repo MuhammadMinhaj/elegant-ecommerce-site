@@ -1,6 +1,8 @@
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
-import { Box, Typography } from '@mui/material';
+import {
+  Box, Typography, useMediaQuery, useTheme
+} from '@mui/material';
 
 function ContactDetail() {
   return (
@@ -25,20 +27,30 @@ function ContactDetail() {
 }
 
 function TopHeader() {
+  const theme = useTheme();
+  const isMD = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <Box bgcolor="var(--primary)" py="0.25rem" color="var(--white)">
-      <Box className="container" display="flex" justifyContent="space-between">
-        <ContactDetail />
-        <Box>
+      <Box className="container" display={isMD ? 'block' : 'flex'} justifyContent="space-between">
+        {
+          !isMD && <ContactDetail />
+        }
+
+        <Box textAlign="center">
           <Typography variant="caption">
             TRENDY 25SILVER JEWELRY, SAVE UP 35% OFF TODAY
           </Typography>
         </Box>
-        <Box>
-          <Typography variant="subtitle2">
-            Monday - Fiday: 9 AM - 12 AM, Become a seller
-          </Typography>
-        </Box>
+        {
+           !isMD && (
+           <Box>
+             <Typography variant="subtitle2">
+               Monday - Fiday: 9 AM - 12 AM, Become a seller
+             </Typography>
+           </Box>
+           )
+        }
+
       </Box>
     </Box>
   );
