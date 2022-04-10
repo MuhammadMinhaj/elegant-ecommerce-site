@@ -1,5 +1,5 @@
 import { Box, Divider, Grid } from '@mui/material';
-import ProductDetail from './ProductDetail';
+import ProductDetail from './ProductDetail/ProductDetail';
 import ProductImage from './ProductImage';
 import ProductTopbar from './ProductTopbar';
 
