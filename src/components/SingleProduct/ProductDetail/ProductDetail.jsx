@@ -3,6 +3,7 @@ import ShopIcon from '@mui/icons-material/Shop';
 import {
   Box, Button, Rating, Typography, useMediaQuery, useTheme
 } from '@mui/material';
+import ColorPicker from '../../DynamicCategory/Filter/Color';
 import List from './List';
 import QuantityBtns from './QuantityBtns';
 
@@ -18,6 +19,10 @@ function ProductDetail() {
       </Box>
       <Box maxWidth={isMD ? '100%' : '400px'} width="100%">
         <List />
+        <Box>
+          <Typography variant="subtitle1" color="text.secondary">Color : </Typography>
+          <ColorPicker position="flex-end" />
+        </Box>
         <QuantityBtns />
         <Box display="flex">
           <Button startIcon={<AddShoppingCartIcon />} color="secondary" size="large" fullWidth>Add to cart</Button>
