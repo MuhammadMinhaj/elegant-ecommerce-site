@@ -5,6 +5,8 @@
 @import url("./Footer.css");
 :root {
   --white: #fff;
+  --primary: #101823;
+  --secondary: #fe2424;
 }
 html,
 body {
