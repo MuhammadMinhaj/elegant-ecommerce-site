@@ -3,6 +3,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 import Actions from './Actions';
+import ProductLabel from './ProductLabel';
 
 function Product({ isEnd }) {
   const [isOver, setOver] = useState(false);
@@ -20,7 +21,9 @@ function Product({ isEnd }) {
       onMouseLeave={handleMouseLeave}
       borderBottom={`${isEnd ? '0px' : '1px'} solid #ededed`}
       display="flex"
+      position="relative"
     >
+      <ProductLabel position="right" />
       <Box component="img" maxWidth="250px" maxHeight="200px" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
 
       <Box py="1rem" px="0.5rem">

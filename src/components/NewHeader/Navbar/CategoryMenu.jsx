@@ -69,6 +69,7 @@ function CategoryMenu() {
             width: '100%'
           }
         }}
+
       >
         {options.map((option) => (
           <MenuItem key={option} onClick={handleClose}>

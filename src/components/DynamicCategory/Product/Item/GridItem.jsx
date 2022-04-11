@@ -3,6 +3,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 import Actions from './Actions';
+import ProductLabel from './ProductLabel';
 
 function Product({ isStart, isEnd }) {
   const [isOver, setOver] = useState(false);
@@ -14,9 +15,13 @@ function Product({ isStart, isEnd }) {
   };
   return (
     <Grid item xs={12} md={6} lg={4}>
-      <Box component="div" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} borderLeft={`${isStart ? '0px' : '1px'} solid #ededed`} borderBottom={`${isEnd ? '0px' : '1px'} solid #ededed`}>
+      <Box position="relative" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} borderLeft={`${isStart ? '0px' : '1px'} solid #ededed`} borderBottom={`${isEnd ? '0px' : '1px'} solid #ededed`}>
+
+        <ProductLabel />
+
         <Box component="img" width="100%" height="auto" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
         <Box p="1.5rem">
+
           <Typography>Alcatra porkchop venison</Typography>
           <Rating name="size-small" defaultValue={2} size="small" />
           <Box>
