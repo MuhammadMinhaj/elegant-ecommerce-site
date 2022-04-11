@@ -1,12 +1,12 @@
 import {
   Col, Container, Row
 } from 'react-bootstrap';
-import TopCategory from '../Categories/TopCategory';
 import Partners from '../Partners/Partners';
 import Slider from '../Slider/Slider';
 import BestSellers from '../Store/BestSellers/BestSellers';
 import FeaturedProduct from '../Store/FeaturedProduct/FeaturedProduct';
 import MostRecentProduct from '../Store/MostRecentProduct/MostRecentProduct';
+import TopCategory from '../TopCategory/TopCategory';
 import DropShippingWork from './DropShippingWork';
 import FeatureStrip from './FeatureStrip/FeatureStrip';
 

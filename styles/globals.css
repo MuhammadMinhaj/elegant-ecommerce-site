@@ -67,3 +67,6 @@ a {
   background: var(--secondary);
   color: var(--white);
 }
+.swiper-pagination-bullet-active {
+  background-color: var(--secondary) !important;
+}
