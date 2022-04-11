@@ -27,6 +27,7 @@ function Cart() {
         <TextItem title="Subtotal" amount="$250.00" />
         <TextItem title="Shipping Cost" amount="$100.00" />
         <TextItem title="Discount" amount="$50.00" />
+        <TextItem title="Vat" amount="25%" />
         <Box py="0.5rem">
 
           <Divider />
