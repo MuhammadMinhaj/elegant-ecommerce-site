@@ -20,7 +20,7 @@ function CartProduct() {
     setProducts((prod) => prod.filter((p) => p?.id !== id));
   };
   return (
-    <Box>
+    <Box sx={{ maxHeight: '400px', overflowY: 'auto' }}>
       {
         products?.map((prod) => (
           <CartProdItem {...prod} handleClickDelete={() => handleClickDelete(prod?.id)} />
