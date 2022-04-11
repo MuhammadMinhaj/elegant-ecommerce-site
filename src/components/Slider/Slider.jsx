@@ -1,86 +1,59 @@
+import { Box } from '@mui/material';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import React from 'react';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-// import "./styles.css";
-// import required modules
 import { Navigation, Pagination } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-// Import Swiper styles
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Slide from './Slide';
 
-const MainSlider = [
+const slides = [
   {
-    id: 1,
-    name: 'TOP SMARTPHONES',
-    title: 'Performance Wonderful',
-    price: 899,
-    details:
-      'A ornare aliquam laoreet adipiscing vestibul integer malesuada ullamcorper suspeid. A ornare aliquam laoreet adipiscing vestibul.',
-    img: 'https://t3.ftcdn.net/jpg/02/29/38/78/240_F_229387809_UT2jcqMaiguTNWz9HreOnUgeNfGU860T.jpg'
+    title: 'All iMac Pro Are 10% Discount For Today',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convalliss.',
+    imgSrc: 'https://pngimg.com/uploads/macbook/macbook_PNG60.png'
+
   },
   {
-    id: 1,
-    name: 'SMART WATCHES',
-    title: 'Health CareMonitor.',
-    price: 899,
-    details:
-      'A ornare aliquam laoreet adipiscing vestibul integer malesuada ullamcorper suspeid. A ornare aliquam laoreet adipiscing vestibul.',
-    img: 'https://t3.ftcdn.net/jpg/01/48/00/62/240_F_148006279_Ta4xEeoysQptY3RE8KMtlUd2WR6AZuqs.jpg'
+    title: '50% Off For Your First Shopping',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convalliss.',
+    imgSrc: 'https://pngimg.com/uploads/macbook/macbook_PNG19.png'
+
   },
+
   {
-    id: 1,
-    name: 'TOP SMARTPHONES',
-    title: 'Performance Wonderful',
-    price: 899,
-    details:
-      'A ornare aliquam laoreet adipiscing vestibul integer malesuada ullamcorper suspeid. A ornare aliquam laoreet adipiscing vestibul.',
-    img: 'https://t3.ftcdn.net/jpg/02/29/38/78/240_F_229387809_UT2jcqMaiguTNWz9HreOnUgeNfGU860T.jpg'
+    title: 'Apple MacBook Air 13.3-Inch',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convalliss.',
+    imgSrc: 'https://pngimg.com/uploads/macbook/macbook_PNG11.png'
   }
 ];
+
 function Slider() {
   return (
-    <div className="container_1">
-      <div className="hero-banner">
-        <Swiper
-          spaceBetween={30}
-          hashNavigation={{
-            watchState: true
-          }}
-          pagination={{
-            clickable: true
-          }}
+    <Box>
+      <Swiper
+        spaceBetween={30}
+        hashNavigation={{
+          watchState: true
+        }}
+        pagination={{
+          clickable: true
+        }}
             // navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {MainSlider.map((item) => (
-            <div ky={item?.id} className="main_slider">
-              <SwiperSlide data-hash="slide1">
-                <div className="inner_main_slider">
-                  <div className="main_slider_text">
-                    <h5>{item?.name}</h5>
-                    <h2>{item?.title}</h2>
-                    <p>{item?.details}</p>
-                    <button type="button">
-                      $
-                      {item?.price}
-                      {' '}
-                      | buy now
-                    </button>
-                  </div>
-                  <div className="main_slider_img">
-                    <img src={item?.img} alt="" />
-                  </div>
-                </div>
-              </SwiperSlide>
-            </div>
-          ))}
-        </Swiper>
-      </div>
-    </div>
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+
+        {
+        slides?.map((slide, ind) => (
+          <SwiperSlide data-hash={`slide-${ind}`} key={slide?.title}>
+            <Slide {...slide} />
+          </SwiperSlide>
+        ))
+      }
+
+      </Swiper>
+    </Box>
   );
 }
 

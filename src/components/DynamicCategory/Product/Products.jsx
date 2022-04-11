@@ -4,6 +4,14 @@ import GridItem from './Item/GridItem';
 import TableItem from './Item/TableItem';
 import ViewFilter from './ViewFilter';
 
+function ResponsiveGridItem(props) {
+  return (
+    <Grid item xs={12} md={6} lg={4}>
+      <GridItem {...props} />
+    </Grid>
+  );
+}
+
 function DynamicCategory() {
   const [isGrid, setGrid] = useState(false);
   const handleClickToViewChange = (currentViewStatus) => {
@@ -17,20 +25,23 @@ function DynamicCategory() {
         {
           isGrid ? (
             <Grid container>
-              <GridItem isStart />
-              <GridItem />
-              <GridItem />
-              <GridItem />
-              <GridItem isStart isEnd />
-              <GridItem isEnd />
-              <GridItem isEnd />
-              <GridItem isEnd />
+              <ResponsiveGridItem isStart />
+              <ResponsiveGridItem />
+              <ResponsiveGridItem />
+              <ResponsiveGridItem isEnd isStart />
+              <ResponsiveGridItem isEnd />
+              <ResponsiveGridItem isEnd />
             </Grid>
           ) : (
             <>
+
               <TableItem />
               <TableItem />
               <TableItem />
+              <TableItem />
+              <TableItem />
+              <TableItem isEnd />
+
             </>
           )
         }

@@ -3,11 +3,18 @@
 @import url("./homepage.css");
 @import url("./Account.css");
 @import url("./Footer.css");
+@import url("swiper/css");
+@import url("swiper/css/navigation");
+@import url("swiper/css");
+@import url("swiper/css/pagination");
 :root {
   --white: #fff;
   --primary: #101823;
-  --secondary: #fe2424;
+  --secondary: #d23f57;
+  --secondary-deep: #fe2424;
   --success: #42ba96;
+  --text-head: #2b3445;
+  --text-pera: #0f3460;
   --muted: rgba(0, 0, 0, 0.54);
 }
 html,
@@ -29,4 +36,34 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.custom-btn {
+  border: none;
+  outline: none;
+  border: 2px solid var(--secondary);
+  background: var(--secondary);
+  color: var(--white);
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  border-radius: 2rem;
+}
+.custom-btn:hover {
+  background: var(--white);
+  color: var(--secondary);
+}
+
+.custom-btn-outline {
+  border: none;
+  outline: none;
+  border: 2px solid var(--secondary);
+  background: var(--white);
+  color: var(--secondary);
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  border-radius: 2rem;
+}
+.custom-btn-outline:hover {
+  background: var(--secondary);
+  color: var(--white);
 }
