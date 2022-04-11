@@ -14,27 +14,27 @@ const navbarData = [
     path: '/shop'
   },
   {
-    name: 'B2B',
-    path: '/'
+    name: 'Single Product',
+    path: '/product/demo'
   },
   {
-    name: 'Recent Products',
-    path: '/'
+    name: 'Category',
+    path: '/category/demo'
   },
   {
-    name: 'Blog',
-    isDropDown: true
+    name: 'Checkout',
+    path: '/checkout'
   },
   {
     name: 'User Account',
     isDropDown: true
   },
   {
-    name: 'Contact US',
+    name: 'B2B',
     path: '/'
   },
   {
-    name: 'Extra',
+    name: 'Contact Us',
     path: '/'
   }
 ];

@@ -6,12 +6,22 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 const options = [
-  'Dropdown Item - 1',
-  'Dropdown Item - 2',
-  'Dropdown Item - 3',
-  'Dropdown Item - 4',
-  'Dropdown Item - 5'
-
+  {
+    name: 'Profile',
+    path: '/user/profile'
+  },
+  {
+    name: 'Change Password',
+    path: '/user/change-password'
+  },
+  {
+    name: 'Login',
+    path: '/user/login'
+  },
+  {
+    name: 'Signup',
+    path: '/user/signup'
+  }
 ];
 function NavItem({ name, isDropDown, path }) {
   const router = useRouter();
@@ -63,8 +73,8 @@ function NavItem({ name, isDropDown, path }) {
           }}
         >
           {options.map((option) => (
-            <MenuItem key={option} onClick={handleClose}>
-              {option}
+            <MenuItem key={option?.name} onClick={() => router.push(option?.path)}>
+              {option?.name}
             </MenuItem>
           ))}
         </Menu>
