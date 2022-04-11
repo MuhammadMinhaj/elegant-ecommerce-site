@@ -70,3 +70,7 @@ a {
 .swiper-pagination-bullet-active {
   background-color: var(--secondary) !important;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--secondary) !important;
+}

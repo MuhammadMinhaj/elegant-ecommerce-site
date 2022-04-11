@@ -4,7 +4,7 @@ import {
 
 function Item({ title, count, imgSrc }) {
   return (
-    <Grid item sm={4}>
+    <Grid item xs={12} sm={12} md={4}>
       <Box bgcolor="var(--white)" p="0.75rem" borderRadius="2rem">
         <CardActionArea sx={{ borderRadius: '1rem' }}>
           <Box sx={{
