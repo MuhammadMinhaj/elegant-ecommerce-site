@@ -6,9 +6,9 @@ import {
   Box, Checkbox, Grid, Typography
 } from '@mui/material';
 import { useRef } from 'react';
+import CountrySelect from '../Common/CountrySelect';
+import StateSelect from '../Common/StateSelect';
 import InputField from '../User/Common/InputField';
-import CountrySelect from './CountrySelect';
-import StateSelect from './StateSelect';
 
 export default function ShippingDetail({ errors, handleChange }) {
   const fullNameRef = useRef();
@@ -22,18 +22,18 @@ export default function ShippingDetail({ errors, handleChange }) {
       </Typography>
       <Box height="1rem" />
       <Grid container spacing={2}>
-        <Grid item md={12} lg={12}>
+        <Grid item xs={12} md={12} lg={12}>
           <InputField
             inputRef={fullNameRef}
             name="firstname"
-            label="Company/Persona Name"
+            label="Company/Personal Name"
             icon={<DriveFileRenameOutlineIcon />}
             placeholder="First Name"
             handleChange={handleChange}
             errorMsg={errors?.fullName}
           />
         </Grid>
-        <Grid item md={12} lg={12}>
+        <Grid item xs={12} md={12} lg={12}>
           <InputField
             inputRef={fullNameRef}
             name="lastName"
@@ -44,7 +44,7 @@ export default function ShippingDetail({ errors, handleChange }) {
             errorMsg={errors?.fullName}
           />
         </Grid>
-        <Grid item md={12} lg={6}>
+        <Grid item xs={12} md={12} lg={6}>
           <InputField
             inputRef={emailRef}
             name="email"
@@ -55,7 +55,7 @@ export default function ShippingDetail({ errors, handleChange }) {
             errorMsg={errors?.email}
           />
         </Grid>
-        <Grid item md={12} lg={6}>
+        <Grid item xs={12} md={12} lg={6}>
           <InputField
             inputRef={emailRef}
             name="85254"
@@ -67,10 +67,10 @@ export default function ShippingDetail({ errors, handleChange }) {
             type="number"
           />
         </Grid>
-        <Grid item md={12} lg={6}>
+        <Grid item xs={12} md={12} lg={6}>
           <CountrySelect />
         </Grid>
-        <Grid item md={12} lg={6}>
+        <Grid item xs={12} md={12} lg={6}>
           <StateSelect />
         </Grid>
 

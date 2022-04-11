@@ -18,7 +18,7 @@ export default function BillingDetail({ errors, handleChange }) {
       </Typography>
       <Box height="1rem" />
       <Grid container spacing={2}>
-        <Grid item md={12} lg={6}>
+        <Grid item xs={12} md={12} lg={6}>
           <InputField
             inputRef={fullNameRef}
             name="firstname"
@@ -29,7 +29,7 @@ export default function BillingDetail({ errors, handleChange }) {
             errorMsg={errors?.fullName}
           />
         </Grid>
-        <Grid item md={12} lg={6}>
+        <Grid item xs={12} md={12} lg={6}>
           <InputField
             inputRef={fullNameRef}
             name="lastName"
@@ -40,7 +40,7 @@ export default function BillingDetail({ errors, handleChange }) {
             errorMsg={errors?.fullName}
           />
         </Grid>
-        <Grid item md={12} lg={6}>
+        <Grid item xs={12} md={12} lg={6}>
           <InputField
             inputRef={emailRef}
             name="email"
@@ -51,7 +51,7 @@ export default function BillingDetail({ errors, handleChange }) {
             errorMsg={errors?.email}
           />
         </Grid>
-        <Grid item md={12} lg={6}>
+        <Grid item xs={12} md={12} lg={6}>
           <InputField
             inputRef={emailRef}
             name="phone"
