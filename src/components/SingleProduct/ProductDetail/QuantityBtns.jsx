@@ -37,7 +37,6 @@ export default function BasicButtonGroup({ isDisabled }) {
           <IncreaseDecreaseButton icon={<AddIcon />} isDisabled={isDisabled} />
         </Box>
       </Paper>
-
     </Box>
   );
 }

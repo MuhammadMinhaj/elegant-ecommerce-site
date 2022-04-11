@@ -22,9 +22,9 @@ function Checkout() {
           </Box>
         </Grid>
         <Grid item md={12} lg={6}>
-          <PaymentMethod />
           <Cart />
-
+          <Box height="1.5rem" />
+          <PaymentMethod />
         </Grid>
       </Grid>
 
