@@ -1,7 +1,38 @@
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Box, IconButton } from '@mui/material';
+import { Box } from '@mui/material';
 import CategoryMenu from './CategoryMenu';
+import MoreMenu from './MoreMenu';
 import NavItem from './NavItem';
+
+const navbarData = [
+  {
+    name: 'Home',
+    path: '/'
+  },
+  {
+    name: 'Shop',
+    path: '/sope'
+  },
+  {
+    name: 'B2B',
+    path: '/'
+  },
+  {
+    name: 'Recent Products',
+    path: '/'
+  },
+  {
+    name: 'Blog',
+    isDropDown: true
+  },
+  {
+    name: 'User Account',
+    isDropDown: true
+  },
+  {
+    name: 'Contact US',
+    path: '/'
+  }
+];
 
 function Navbar() {
   return (
@@ -11,17 +42,13 @@ function Navbar() {
           <CategoryMenu />
           <Box display="flex" justifyContent="flex-end">
             <Box display="flex" justifyContent="flex-end">
-              <NavItem name="Home" />
-              <NavItem name="Shop" />
-              <NavItem name="B2B" />
-              <NavItem name="Recent Products" />
-              <NavItem name="Blog" isDropDown />
-              <NavItem name="User Account" isDropDown />
-              <NavItem name="Contact US" />
+              {
+                navbarData.map(({ ...rest }) => (
+                  <NavItem {...rest} key={rest?.name} />
+                ))
+              }
             </Box>
-            <IconButton color="inherit">
-              <MoreVertIcon />
-            </IconButton>
+            <MoreMenu options={navbarData} />
           </Box>
 
         </Box>

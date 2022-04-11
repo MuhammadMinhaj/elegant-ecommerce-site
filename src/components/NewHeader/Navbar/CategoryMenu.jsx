@@ -47,7 +47,6 @@ function CategoryMenu() {
             Categories
           </Box>
           <Box>
-
             {
                open ? <KeyboardArrowDownIcon color="inherit" /> : <KeyboardArrowLeftIcon color="inherit" />
             }
