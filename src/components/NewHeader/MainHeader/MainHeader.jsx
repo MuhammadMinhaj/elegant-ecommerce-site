@@ -7,7 +7,7 @@ function MainHeader() {
   const theme = useTheme();
   const isMD = useMediaQuery(theme.breakpoints.up('md'));
   return (
-    <Box bgcolor="var(--white)">
+    <Box bgcolor="var(--white)" position="sticky" sx={{ top: '0', zIndex: '99999', borderBottom: '2px solid var(--primary)' }}>
       <Box className="container" display="flex" justifyContent="space-between" alignItems="center" py="0.5rem">
         {
           isMD && <Brand />
