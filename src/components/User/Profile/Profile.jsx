@@ -40,7 +40,7 @@ function ProfileShow() {
 }
 
 function Profile() {
-  const [isEdit, setEdit] = useState(true);
+  const [isEdit, setEdit] = useState(false);
   return (
     <Layout currentPath="profile">
       <Box bgcolor="var(--white)" p="0.5rem" borderRadius="0.5rem">
