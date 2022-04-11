@@ -6,7 +6,7 @@ import {
 } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useRef, useState } from 'react';
-import InputField from '../Common/InputField';
+import PasswordField from '../../Common/PasswordField';
 import Title from '../Common/Title';
 import Layout from '../Layout/Layout';
 
@@ -63,7 +63,7 @@ export default function ChangePassword() {
           <Box height="1rem" />
           <Grid container spacing={2}>
             <Grid item sm={12} md={6}>
-              <InputField
+              <PasswordField
                 inputRef={fullNameRef}
                 name="password"
                 label="Password"
@@ -75,7 +75,7 @@ export default function ChangePassword() {
               />
             </Grid>
             <Grid item sm={12} md={6}>
-              <InputField
+              <PasswordField
                 inputRef={emailRef}
                 name="password"
                 label="New Password"
@@ -87,7 +87,7 @@ export default function ChangePassword() {
               />
             </Grid>
             <Grid item sm={12} md={6}>
-              <InputField
+              <PasswordField
                 inputRef={emailRef}
                 name="password"
                 label="Confirm Password"

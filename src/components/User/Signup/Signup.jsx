@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import { useRouter } from 'next/router';
 import { useRef, useState } from 'react';
 import { FacebookLoginButton, GoogleLoginButton } from 'react-social-login-buttons';
+import PasswordField from '../../Common/PasswordField';
 import InputField from '../Common/InputField';
 
 export default function SignUpForm() {
@@ -90,7 +91,7 @@ export default function SignUpForm() {
           errorMsg={errors?.email}
 
         />
-        <InputField
+        <PasswordField
           inputRef={passwordRef}
           name="password"
           label="Password"
@@ -101,7 +102,7 @@ export default function SignUpForm() {
           type="password"
 
         />
-        <InputField
+        <PasswordField
           inputRef={retypePasswordRef}
           name="retypePassword"
           label="Re-type Password"

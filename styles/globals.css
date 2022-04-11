@@ -8,6 +8,7 @@
   --primary: #101823;
   --secondary: #fe2424;
   --success: #42ba96;
+  --muted: rgba(0, 0, 0, 0.54);
 }
 html,
 body {
