@@ -11,7 +11,7 @@ const navbarData = [
   },
   {
     name: 'Shop',
-    path: '/sope'
+    path: '/shop'
   },
   {
     name: 'B2B',
