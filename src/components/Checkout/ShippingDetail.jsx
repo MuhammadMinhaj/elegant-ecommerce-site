@@ -2,8 +2,9 @@ import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutli
 import EditRoadIcon from '@mui/icons-material/EditRoad';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import NumbersIcon from '@mui/icons-material/Numbers';
-import { Grid, Typography } from '@mui/material';
-import Box from '@mui/material/Box';
+import {
+  Box, Checkbox, Grid, Typography
+} from '@mui/material';
 import { useRef } from 'react';
 import InputField from '../User/Common/InputField';
 import CountrySelect from './CountrySelect';
@@ -74,7 +75,10 @@ export default function ShippingDetail({ errors, handleChange }) {
         </Grid>
 
       </Grid>
-
+      <Box display="flex" alignItems="center" py="0.5rem">
+        <Checkbox defaultChecked />
+        <Typography>Ship to a different address?</Typography>
+      </Box>
     </Box>
 
   );

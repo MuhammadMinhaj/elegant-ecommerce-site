@@ -2,6 +2,7 @@ import { Box, Grid } from '@mui/material';
 import BillingDetail from './BillingDetail';
 import Cart from './Cart/Cart';
 import ShippingDetail from './ShippingDetail';
+import ShippingMethod from './ShippingMethod';
 
 function Checkout() {
   return (
@@ -11,8 +12,9 @@ function Checkout() {
           <Box bgcolor="var(--white)" p="2rem" borderRadius="0.5rem">
             <BillingDetail />
             <Box height="1.5rem" />
-
             <ShippingDetail />
+            <Box height="1.5rem" />
+            <ShippingMethod />
           </Box>
         </Grid>
         <Grid item md={12} lg={6}>
