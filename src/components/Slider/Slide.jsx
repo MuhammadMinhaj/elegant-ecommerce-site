@@ -24,7 +24,7 @@ function Slide({ title, imgSrc, description }) {
               <Typography variant="body1" color="var(--text-pera)" py={isMD ? '1rem' : '2rem'}>
                 {description}
               </Typography>
-              <Box display={isMD ? 'block' : 'flex'} justifyContent={isMD ? 'center' : 'flex-start'}>
+              <Box display="flex" flexDirection={isMD ? 'column' : 'row'} alignItems="center" justifyContent={isMD ? 'center' : 'flex-start'}>
                 <Box component="button" className="custom-btn" display="flex" alignItems="center">
                   <ShoppingBasketIcon />
                   <Box component="span" width="1rem" />

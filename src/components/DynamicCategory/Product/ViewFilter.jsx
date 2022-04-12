@@ -5,7 +5,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 
-function ViewFilter({ handleClickToViewChange }) {
+function ViewFilter({ handleClickToViewChange, isNonePagination }) {
   const [age, setAge] = useState(25);
 
   const handleChange = (event) => {
@@ -13,18 +13,23 @@ function ViewFilter({ handleClickToViewChange }) {
   };
   return (
     <Box display="flex" justifyContent="space-between" alignItems="center" px="1rem" py="0.25rem">
-      <Select
-        id="demo-simple-select-standard"
-        value={age}
-        onChange={handleChange}
-        variant="standard"
-        size="small"
-      >
-        <MenuItem value={25}>25</MenuItem>
-        <MenuItem value={50}>50</MenuItem>
-        <MenuItem value={75}>75</MenuItem>
-        <MenuItem value={100}>100</MenuItem>
-      </Select>
+      {
+        !isNonePagination && (
+        <Select
+          id="demo-simple-select-standard"
+          value={age}
+          onChange={handleChange}
+          variant="standard"
+          size="small"
+        >
+          <MenuItem value={25}>25</MenuItem>
+          <MenuItem value={50}>50</MenuItem>
+          <MenuItem value={75}>75</MenuItem>
+          <MenuItem value={100}>100</MenuItem>
+        </Select>
+        )
+      }
+
       <Box display="flex" alignItems="center">
         <IconButton size="small" onClick={() => handleClickToViewChange(false)}>
           <TableRowsIcon />

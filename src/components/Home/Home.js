@@ -1,13 +1,11 @@
-import {
-  Col, Container, Row
-} from 'react-bootstrap';
 import Partners from '../Partners/Partners';
 import Slider from '../Slider/Slider';
-import BestSellers from '../Store/BestSellers/BestSellers';
-import FeaturedProduct from '../Store/FeaturedProduct/FeaturedProduct';
+// import BestSellers from '../Store/BestSellers/BestSellers';
 import MostRecentProduct from '../Store/MostRecentProduct/MostRecentProduct';
 import TopCategory from '../TopCategory/TopCategory';
+import BestSeller from './BestSeller/BestSeller';
 import DropShippingWork from './DropShippingWork';
+import FeaturedProduct from './FeaturedProduct';
 import FeatureStrip from './FeatureStrip/FeatureStrip';
 
 function Home() {
@@ -17,20 +15,22 @@ function Home() {
       <FeatureStrip />
 
       <TopCategory />
-
-      <div className="featured-section">
+      {/* <div className="featured-section">
         <Container>
           <Row>
             <Col md={12}>
               <div className="featured-column">
-                <FeaturedProduct title="Featured Products" />
+                <PrevFeaturedProduct />
               </div>
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
+      <FeaturedProduct title="Featured Products" />
+
       <DropShippingWork />
-      <BestSellers />
+      <BestSeller />
+      {/* <BestSellers /> */}
       <Partners />
       <MostRecentProduct />
     </div>
