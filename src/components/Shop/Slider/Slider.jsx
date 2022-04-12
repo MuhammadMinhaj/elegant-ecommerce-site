@@ -1,71 +1,34 @@
-function Slider() {
-  return (
+import { Box } from '@mui/material';
+import { SwiperSlide } from 'swiper/react';
+import Slider from '../../Common/Slider';
 
-    <div
-      id="carouselExampleIndicators"
-      className="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div className="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          className="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        />
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        />
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        />
-      </div>
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <img src="/shope_slider/shop_slider1.png" className="d-block w-100" alt="..." />
-        </div>
-        <div className="carousel-item">
-          <img src="/shope_slider/shop_slider1.png" className="d-block w-100" alt="..." />
-        </div>
-        <div className="carousel-item">
-          <img src="/shope_slider/shop_slider1.png" className="d-block w-100" alt="..." />
-        </div>
-      </div>
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span
-          className="carousel-control-prev-icon"
-          aria-hidden="true"
-        />
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span
-          className="carousel-control-next-icon"
-          aria-hidden="true"
-        />
-        <span className="visually-hidden">Next</span>
-      </button>
-    </div>
+function Slide({ imgSrc }) {
+  return (
+    <Box>
+      <Box component="img" src={imgSrc} width="100%" maxHeight="650px" />
+    </Box>
 
   );
 }
 
-export default Slider;
+function ShopSlider() {
+  return (
+    <Box>
+      <Slider>
+        <SwiperSlide>
+          <Slide imgSrc="https://img.freepik.com/free-photo/agv-robots-efficiently-sorting-hundreds-parcels-per-hour-automated-guided-vehicle-agv-3d-rendering_41470-3414.jpg?w=1800" />
+        </SwiperSlide>
+        <SwiperSlide>
+
+          <Slide imgSrc="https://img.freepik.com/free-photo/shopping-cart-shopping-bags-credit-card-up-stairs-tablet-which-is-online-shop-store-internet-digital-market_42098-193.jpg?w=1380" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Slide imgSrc="https://img.freepik.com/free-photo/agv-forklift-trucks-transport-more-with-safety-warehouse-3d-rendering_41470-2905.jpg?w=1800" />
+        </SwiperSlide>
+
+      </Slider>
+    </Box>
+  );
+}
+
+export default ShopSlider;

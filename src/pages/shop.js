@@ -5,7 +5,8 @@ import DiscountOffer from '../components/Shop/DiscountOffer/DiscountOffer';
 import DiscountOnAllProduct from '../components/Shop/DiscountOffer/DiscountOnAllProduct';
 import ElectronicCategory from '../components/Shop/ElectronicCategory/ElectronicCategory';
 import PopularProduct from '../components/Shop/PopularProduct/PopularProduct';
-import Slider from '../components/Shop/Slider/Container';
+import Slider from '../components/Shop/Slider/Slider';
+// import Slider from '../components/Shop/Slider/Container';
 import TodayDeals from '../components/Shop/TodayDeals/TodayDeals';
 
 function ShopPage() {

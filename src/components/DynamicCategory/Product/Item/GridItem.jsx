@@ -2,6 +2,8 @@ import {
   Box, Grow, Rating, Typography
 } from '@mui/material';
 import { useState } from 'react';
+import { SwiperSlide } from 'swiper/react';
+import Slider from '../../../Common/Slider';
 import Actions from './Actions';
 import ProductLabel from './ProductLabel';
 
@@ -14,12 +16,17 @@ function Product({ isStart, isEnd }) {
     setOver(false);
   };
   return (
-
     <Box position="relative" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} borderLeft={`${isStart ? '0px' : '1px'} solid #ededed`} borderBottom={`${isEnd ? '0px' : '1px'} solid #ededed`}>
-
       <ProductLabel />
+      <Slider isNotArrow>
+        <SwiperSlide>
+          <Box component="img" width="100%" height="auto" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Box component="img" width="100%" height="auto" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
+        </SwiperSlide>
+      </Slider>
 
-      <Box component="img" width="100%" height="auto" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
       <Box p="1.5rem">
 
         <Typography>Alcatra porkchop venison</Typography>

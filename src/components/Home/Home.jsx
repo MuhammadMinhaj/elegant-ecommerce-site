@@ -5,6 +5,7 @@ import Slider from '../Slider/Slider';
 import TopCategory from '../TopCategory/TopCategory';
 import BecomeASeller from './BecomeASeller/BecomeASeller';
 import BestSeller from './BestSeller/BestSeller';
+import BussinessToBussiness from './BussinessToBussiness/BussinessToBussiness';
 import ClientTestimonials from './ClientTestimonials/ClientTestimonials';
 import DropShippingWork from './DropShippingWork';
 import FeaturedProduct from './FeaturedProduct';
@@ -33,13 +34,15 @@ function Home() {
 
       <DropShippingWork />
       <BestSeller />
+      <BussinessToBussiness />
       {/* <BestSellers /> */}
 
-      <Partners />
       <ClientTestimonials />
       <BecomeASeller />
 
       <ProductsLavel />
+      <Partners />
+
       {/* <MostRecentProduct /> */}
     </div>
   );
