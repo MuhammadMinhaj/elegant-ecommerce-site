@@ -1,12 +1,13 @@
 import Partners from '../Partners/Partners';
 import Slider from '../Slider/Slider';
 // import BestSellers from '../Store/BestSellers/BestSellers';
-import MostRecentProduct from '../Store/MostRecentProduct/MostRecentProduct';
+// import MostRecentProduct from '../Store/MostRecentProduct/MostRecentProduct';
 import TopCategory from '../TopCategory/TopCategory';
 import BestSeller from './BestSeller/BestSeller';
 import DropShippingWork from './DropShippingWork';
 import FeaturedProduct from './FeaturedProduct';
 import FeatureStrip from './FeatureStrip/FeatureStrip';
+import ProductsLavel from './ProductsLavel/ProductsLavel';
 
 function Home() {
   return (
@@ -32,7 +33,8 @@ function Home() {
       <BestSeller />
       {/* <BestSellers /> */}
       <Partners />
-      <MostRecentProduct />
+      <ProductsLavel />
+      {/* <MostRecentProduct /> */}
     </div>
   );
 }
