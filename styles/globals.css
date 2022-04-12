@@ -9,6 +9,7 @@
 @import url("swiper/css/pagination");
 :root {
   --white: #fff;
+  --white-gray: #adb5bd;
   --primary: #101823;
   --secondary: #d23f57;
   --secondary-deep: #fe2424;
@@ -73,4 +74,7 @@ a {
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--secondary) !important;
+}
+.swiper-pagination-bullet {
+  background: var(--white-gray);
 }

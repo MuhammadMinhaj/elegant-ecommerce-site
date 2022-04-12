@@ -4,6 +4,7 @@ import Slider from '../Slider/Slider';
 // import MostRecentProduct from '../Store/MostRecentProduct/MostRecentProduct';
 import TopCategory from '../TopCategory/TopCategory';
 import BestSeller from './BestSeller/BestSeller';
+import ClientTestimonials from './ClientTestimonials/ClientTestimonials';
 import DropShippingWork from './DropShippingWork';
 import FeaturedProduct from './FeaturedProduct';
 import FeatureStrip from './FeatureStrip/FeatureStrip';
@@ -33,6 +34,8 @@ function Home() {
       <BestSeller />
       {/* <BestSellers /> */}
       <Partners />
+      <ClientTestimonials />
+
       <ProductsLavel />
       {/* <MostRecentProduct /> */}
     </div>

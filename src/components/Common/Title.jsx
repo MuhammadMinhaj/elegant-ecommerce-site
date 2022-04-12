@@ -2,7 +2,9 @@ import {
   Box, Divider, Typography, useMediaQuery, useTheme
 } from '@mui/material';
 
-function Title({ title, icon, endActions }) {
+function Title({
+  title, icon, endActions, tColor
+}) {
   const theme = useTheme();
   const isSM = useMediaQuery(theme.breakpoints.down('sm'));
   return (
@@ -14,7 +16,7 @@ function Title({ title, icon, endActions }) {
           </Box>
           <Box width="1rem" />
           <Box>
-            <Typography variant={isSM ? 'h5' : 'h4'} component="h2" sx={{ fontWeight: '600', textTransform: 'uppercase' }} color="var(--text-head)">{title || 'Title'}</Typography>
+            <Typography variant={isSM ? 'h5' : 'h4'} component="h2" sx={{ fontWeight: '600', textTransform: 'uppercase' }} color={tColor || 'var(--text-head)'}>{title || 'Title'}</Typography>
           </Box>
 
         </Box>
