@@ -1,6 +1,7 @@
-import Footer from '../Footer/Footer';
+// import OldFooter from '../Footer/Footer';
 // import Navbar from '../Header/Navbar/Navbar';
 // import TopMenu from '../Header/TopMenu';
+import Footer from '../Footer/NewFooter';
 import NewHeader from '../NewHeader/Header';
 
 function Layout({ children }) {
@@ -11,7 +12,9 @@ function Layout({ children }) {
       {/* <TopMenu />
       <Navbar /> */}
       {children}
+      {/* <OldFooter /> */}
       <Footer />
+
     </>
   );
 }
