@@ -11,7 +11,7 @@ function CardItem({ name, icon }) {
         sx={{
           '&:hover': {
             border: '1px solid var(--secondary)',
-            transform: 'scale(1.1)',
+            transform: 'scale(0.9)',
             transition: 'all 0.25s'
           }
         }}

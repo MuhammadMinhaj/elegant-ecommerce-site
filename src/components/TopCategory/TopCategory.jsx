@@ -5,7 +5,15 @@ import {
 } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Title from '../Common/Title';
-import Item from './Item';
+import CatItem from './Item';
+
+function Item(props) {
+  return (
+    <Grid item xs={12} sm={12} md={4}>
+      <CatItem {...props} />
+    </Grid>
+  );
+}
 
 function CategorySlide() {
   return (
