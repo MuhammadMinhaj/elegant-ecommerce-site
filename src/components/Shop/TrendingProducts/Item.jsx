@@ -17,7 +17,7 @@ function Item({
         {/* <Box component="img" src={imgSrc} maxWidth="80px" maxHeight="auto" width="100%" /> */}
       </Box>
       <Box flexGrow="1">
-        <Typography variant="subtitle1" color="var(--text-head)">{name}</Typography>
+        <Typography sx={{ lineHeight: '1' }} variant="subtitle1" color="var(--text-head)">{name}</Typography>
         <Typography sx={{ lineHeight: '1' }} variant="h6" color={discount ? 'red' : 'var(--primary)'}>{price}</Typography>
         {
           discount && (

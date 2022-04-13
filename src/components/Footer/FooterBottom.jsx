@@ -5,14 +5,14 @@ function FooterBottom() {
     <Box color="var(--white)" py="0.5rem" textAlign="center">
       <Box className="container">
         <Typography color="var(--white)" variant="subtitle1">
-          Copyright all rights reserved © 2021
+          All Rights Reserved. Copyright © 2022
         </Typography>
         <Typography color="var(--white)" variant="subtitle1">
-          Developed by
+          Developer by
           {' '}
           <Typography
             component="a"
-            href="https://muhammadminhaj.github.io"
+            href="http://intelwink.com"
             color="var(--white)"
             variant="subtitle1"
             sx={{
@@ -24,7 +24,7 @@ function FooterBottom() {
             }}
             target="_blank"
           >
-            Muhammad Minhaj
+            INTELWINK
           </Typography>
         </Typography>
       </Box>

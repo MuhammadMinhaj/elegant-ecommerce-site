@@ -9,7 +9,7 @@ function Products() {
   const theme = useTheme();
   const isSM = useMediaQuery(theme.breakpoints.down('sm'));
   return (
-    <Box display={isSM ? 'block' : 'flex'}>
+    <Box display={isSM ? 'block' : 'flex'} sx={{ alignItems: 'center', mt: '0.5rem' }}>
       <Item name="Balltip nullaelit frankfu" imgSrc="https://opencart.opencartworks.com/themes/so_flashmart/image/cache/catalog/demo/product/2-200x200.jpg" price="$300" discount="10" />
       <Item name="Balltip nullaelit frankfu" imgSrc="https://opencart.opencartworks.com/themes/so_flashmart/image/cache/catalog/demo/product/1-200x200.jpg" price="$300" discount="10" />
 
@@ -26,8 +26,8 @@ function TrendingProduct() {
   const isMD = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
-    <Box bgcolor="var(--white)">
-      <Box className="container" py="1rem">
+    <Box bgcolor="var(--white)" borderBottom="1px solid #ededed">
+      <Box className="container" py="0.5rem">
         <Box display={isMD ? 'block' : 'flex'} alignItems="center">
 
           {
@@ -54,7 +54,7 @@ function TrendingProduct() {
           }
 
           <Box flexGrow="1">
-            <Carousel cycleNavigation animation="slide" indicators={false} height="80px" fullHeightHover>
+            <Carousel cycleNavigation animation="slide" autoPlay={false} indicators={false} height="100px" fullHeightHover>
               <Products />
               <Products />
               <Products />
