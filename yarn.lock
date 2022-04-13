@@ -676,6 +676,11 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.1.tgz#782fa5da44c4f38ae9fd38e9184b54e451936118"
   integrity sha512-BUyKJGdDWqvWC5GEhyOiUrGNi9iJUr4CU0O2WxJL6QJhHeeA/NVBalH+FeK0r/x/W0rPymXt5s78TDS7d6lCwg==
 
+"@trendyol-js/react-carousel@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@trendyol-js/react-carousel/-/react-carousel-2.0.1.tgz#9f35f2a10ec14fa5f0e4e2dea415373e301200a1"
+  integrity sha512-MsLmHez6VnGBPId6W0IcZJb2VUXhlkNd1n4h2j0GxUFyW578UgHYeaLooyps81XIsshFMTKClBUhsyWK5Nw/Vg==
+
 "@types/hoist-non-react-statics@^3.3.0":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
@@ -2647,10 +2652,26 @@ make-dir@^3.0.2:
   dependencies:
     semver "^6.0.0"
 
+material-auto-rotating-carousel@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/material-auto-rotating-carousel/-/material-auto-rotating-carousel-3.0.2.tgz#a4d41b7fa54e328f0d5687648277c96acf8360d6"
+  integrity sha512-ql/jiV0R9xsOUVn7JNOomvgXHkVFYjmClei+jsfgpOlHXsXztqfOFl6rb0mLbBIpg4mRzTV5oNYOGAM3MvXETA==
+  dependencies:
+    classnames "^2.2.5"
+    material-ui-dots "^2.0.0"
+    prop-types "^15.5.8"
+
 material-colors@^1.2.1:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
   integrity sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg==
+
+material-ui-dots@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/material-ui-dots/-/material-ui-dots-2.0.2.tgz#0d9980536845ec66d51405c9e3d5a94781795065"
+  integrity sha512-1pKjHednWNaVmzo/3fr6dJ+yDCZWfR/GEasqhJKRvb1hIs54064smlNJ/zVdAmt4NMsbxZQPf2D3LnEWvH8y8g==
+  dependencies:
+    prop-types "^15.7.2"
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -3115,7 +3136,7 @@ prop-types-extra@^1.1.0:
     react-is "^16.3.2"
     warning "^4.0.0"
 
-prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
