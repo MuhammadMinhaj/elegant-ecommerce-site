@@ -1,5 +1,6 @@
 import { Box, Divider, Grid } from '@mui/material';
 import { useState } from 'react';
+import productsData from '../../../productsData';
 import GridItem from './Item/GridItem';
 import TableItem from './Item/TableItem';
 import ViewFilter from './ViewFilter';
@@ -7,7 +8,7 @@ import ViewFilter from './ViewFilter';
 function ResponsiveGridItem(props) {
   return (
     <Grid item xs={12} md={6} lg={4}>
-      <GridItem {...props} />
+      <GridItem {...props} withActions />
     </Grid>
   );
 }
@@ -25,25 +26,19 @@ function DynamicCategory() {
         {
           isGrid ? (
             <Grid container>
-              <ResponsiveGridItem isStart />
-              <ResponsiveGridItem />
-              <ResponsiveGridItem />
-              <ResponsiveGridItem isEnd isStart />
-              <ResponsiveGridItem isEnd />
-              <ResponsiveGridItem isEnd />
+              {
+                productsData?.products?.map((prod) => (
+                  <ResponsiveGridItem {...prod} />
+                ))
+              }
+
             </Grid>
-          ) : (
-            <>
-
-              <TableItem />
-              <TableItem />
-              <TableItem />
-              <TableItem />
-              <TableItem />
-              <TableItem isEnd />
-
-            </>
           )
+
+            : productsData?.products?.map((prod) => (
+              <TableItem {...prod} withActions />
+            ))
+
         }
 
       </Box>

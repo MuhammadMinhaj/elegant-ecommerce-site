@@ -1,4 +1,5 @@
 import { Box, Grid } from '@mui/material';
+import productsData from '../../../../productsData';
 import GridProductItem from '../../../DynamicCategory/Product/Item/GridItem';
 import ActionsButton from './Actions';
 
@@ -8,24 +9,12 @@ function ProductsLevel() {
       <ActionsButton />
       <Box height="1.5rem" />
       <Grid container>
-        <Grid item sm={12} md={6} lg={4}>
-          <GridProductItem />
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <GridProductItem />
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <GridProductItem />
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <GridProductItem />
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <GridProductItem />
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <GridProductItem />
-        </Grid>
+        {productsData?.topProducts?.map((prod) => (
+          <Grid item xs={12} sm={6} md={6} lg={4}>
+            <GridProductItem {...prod} withActions />
+          </Grid>
+        ))}
+
       </Grid>
     </Box>
   );

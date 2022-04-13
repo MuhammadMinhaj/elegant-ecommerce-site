@@ -6,7 +6,13 @@ const leftPosition = {
 const rightPosition = {
   right: '0rem'
 };
-function ProductLabel({ position }) {
+const colors = [['#bb0101', 'white'], ['var(--secondary)', 'white']];
+const variants = {
+  news: colors[0],
+  offers: colors[0],
+  hots: colors[0]
+};
+function ProductLabel({ position, status, text }) {
   const getPosition = () => {
     if (position === 'left') {
       return leftPosition;
@@ -19,9 +25,9 @@ function ProductLabel({ position }) {
   };
   return (
     <Box
-      px="2rem"
-      bgcolor="red"
-      color="white"
+      px="1rem"
+      bgcolor={variants[status || 'news'][0]}
+      color={variants[status || 'news'][1]}
       position="absolute"
       top="0.25rem"
       sx={{
@@ -31,7 +37,7 @@ function ProductLabel({ position }) {
           content: '""',
           borderLeft: '10px solid transparent',
           borderRight: ' 0 solid transparent',
-          borderTop: '6px solid #bb0101',
+          borderTop: `6px solid ${variants[status || 'news'][0]}`,
           display: 'inline-block',
           verticalAlign: 'bottom',
           position: 'absolute',
@@ -41,7 +47,7 @@ function ProductLabel({ position }) {
       }}
     >
       <Typography variant="body1">
-        Sale
+        {text || 'N/A'}
       </Typography>
     </Box>
   );

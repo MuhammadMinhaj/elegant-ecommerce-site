@@ -1,6 +1,6 @@
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import { Box, CardActionArea } from '@mui/material';
 import { useRouter } from 'next/router';
 
@@ -43,9 +43,9 @@ function Actions({ position }) {
 
   return (
     <Box display="flex" alignItems="center" justifyContent={position || 'center'}>
-      <ActionButton icon={<ShoppingCartIcon />} />
-      <ActionButton icon={<VisibilityIcon />} handleClick={() => router.push('/product/demo')} />
-      <ActionButton icon={<FavoriteIcon />} />
+      <ActionButton icon={<ShoppingCartOutlinedIcon />} />
+      <ActionButton icon={<VisibilityOutlinedIcon />} handleClick={() => router.push('/product/demo')} />
+      <ActionButton icon={<FavoriteBorderOutlinedIcon />} />
     </Box>
   );
 }
