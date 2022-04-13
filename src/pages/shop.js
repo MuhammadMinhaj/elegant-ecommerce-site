@@ -1,17 +1,18 @@
-import Advertisement from '../components/Advertisement/Advertisement';
+// import Advertisement from '../components/Advertisement/Advertisement';
 import Layout from '../components/Layout/Layout';
-import AllCategories from '../components/Shop/AllCategories/Categories';
+// import AllCategories from '../components/Shop/AllCategories/Categories';
 import Brands from '../components/Shop/Brands/Brands';
-import FeaturedProduct from '../components/Shop/FeaturedProduct';
-import ProductsList from '../components/Shop/Products/ProductsList';
+// import Slider from '../components/Shop/Slider/Container';
+// import TodayDeals from '../components/Shop/TodayDeals/TodayDeals';
+import Products from '../components/Shop/Products/Products';
+// import FeaturedProduct from '../components/Shop/FeaturedProduct';
+// import ProductsList from '../components/Shop/Products/ProductsList';
 // import BuildingTools from '../components/Shop/BuildingTools/BuildingTools';
 // import DiscountOffer from '../components/Shop/DiscountOffer/DiscountOffer';
 // import DiscountOnAllProduct from '../components/Shop/DiscountOffer/DiscountOnAllProduct';
 // import ElectronicCategory from '../components/Shop/ElectronicCategory/ElectronicCategory';
 // import PopularProduct from '../components/Shop/PopularProduct/PopularProduct';
 import Slider from '../components/Shop/Slider/Slider';
-// import Slider from '../components/Shop/Slider/Container';
-// import TodayDeals from '../components/Shop/TodayDeals/TodayDeals';
 import TrendingProduct from '../components/Shop/TrendingProducts/TrendingProduct';
 
 function ShopPage() {
@@ -19,12 +20,13 @@ function ShopPage() {
     <Layout>
       <Slider />
       <TrendingProduct />
-      <AllCategories />
+      <Products />
+      {/* <AllCategories />
       <FeaturedProduct title="Today deals" />
       <Advertisement />
       <ProductsList title="Fashion & Accessories" />
       <Advertisement />
-      <ProductsList title="Electronics" />
+      <ProductsList title="Electronics" /> */}
       <Brands />
       {/* <TodayDeals />
       <PopularProduct title="MOST POPULAR FOR MAN" leftBannerImgSrc="/MostPopularForMan/MostPopularForMan.jpg" bannerTxtTitle="All Product Discount - 30%" />

@@ -2,8 +2,6 @@ import {
   Box, Grow, Rating, Typography
 } from '@mui/material';
 import { useState } from 'react';
-import { SwiperSlide } from 'swiper/react';
-import Slider from '../../../Common/Slider';
 import Actions from './Actions';
 import ProductLabel from './ProductLabel';
 
@@ -26,34 +24,24 @@ function Product({ isEnd }) {
       position="relative"
     >
       <ProductLabel position="right" />
-      <Box maxWidth="250px">
-        <Slider isNotArrow>
-          <SwiperSlide>
-            <Box component="img" py="0.5rem" width="100%" maxHeight="200px" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box component="img" py="0.5rem" maxWidth="250px" maxHeight="200px" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Box component="img" py="0.5rem" maxWidth="250px" maxHeight="200px" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
-          </SwiperSlide>
-        </Slider>
+      <Box maxWidth="100px">
+        <Box component="img" py="0.25rem" width="100%" height="auto" alt="image" src="https://opencart.opencartworks.com/themes/so_flashmart/layout2/image/cache/catalog/demo/product/2-370x370.jpg" />
       </Box>
 
-      <Box py="1rem" px="0.5rem">
-        <Typography>Alcatra porkchop venison</Typography>
+      <Box p="0.5rem">
         <Rating name="size-small" defaultValue={2} size="small" />
+        <Typography variant="h6" color="var(--text-head)">Alcatra porkchop venison</Typography>
         <Box>
           <Typography variant="h6" color="error">$50.00</Typography>
           <Box>
-            <Typography component="del" variant="subtitle1" color="black">$50.00</Typography>
+            <Typography component="del" variant="subtitle1" color="var(--text-pera)">$50.00</Typography>
             {' '}
             <Typography component="span" variant="subtitle2" color="error">-10% Off</Typography>
           </Box>
         </Box>
         <Grow in={isOver}>
-          <Box py="1rem">
-            <Actions />
+          <Box py="0.25rem">
+            <Actions position="left" />
           </Box>
         </Grow>
       </Box>

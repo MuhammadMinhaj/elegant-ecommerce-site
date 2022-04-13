@@ -1,48 +1,22 @@
-import { Grid } from '@mui/material';
-import GridItem from '../../DynamicCategory/Product/Item/GridItem';
-import TableItem from '../../DynamicCategory/Product/Item/TableItem';
+import { Box, Grid } from '@mui/material';
+import ProductsLavel from './ProductLevel/ProductsLavel';
+import TopProducts from './TopProducts';
 
-function ResponsiveGridItem(props) {
+function Products() {
   return (
-    <Grid item xs={12} sm={6} md={4} lg={3}>
-      <GridItem {...props} />
-    </Grid>
-  );
-}
+    <Box bgcolor="var(--white)">
+      <Box className="container" py="2rem">
+        <Grid container spacing={3}>
+          <Grid item sm={12} md={5} lg={4}>
+            <TopProducts />
+          </Grid>
+          <Grid item sm={12} md={7} lg={8}>
+            <ProductsLavel />
+          </Grid>
+        </Grid>
+      </Box>
+    </Box>
 
-function ResponsiveTableItem(props) {
-  return (
-    <Grid item xs={12} sm={12} md={6}>
-      <TableItem {...props} />
-    </Grid>
-  );
-}
-
-function Products({ isGrid }) {
-  if (isGrid) {
-    return (
-      <Grid container>
-        <ResponsiveGridItem isStart />
-        <ResponsiveGridItem />
-        <ResponsiveGridItem />
-        <ResponsiveGridItem isStart />
-        <ResponsiveGridItem />
-        <ResponsiveGridItem isEnd isStart />
-        <ResponsiveGridItem isEnd />
-        <ResponsiveGridItem isEnd />
-      </Grid>
-    );
-  }
-
-  return (
-    <Grid container>
-      <ResponsiveTableItem />
-      <ResponsiveTableItem />
-      <ResponsiveTableItem />
-      <ResponsiveTableItem />
-      <ResponsiveTableItem isEnd />
-      <ResponsiveTableItem isEnd />
-    </Grid>
   );
 }
 

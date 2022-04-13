@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const leftPosition = {
   left: '0rem'
@@ -26,6 +26,7 @@ function ProductLabel({ position }) {
       top="0.25rem"
       sx={{
         ...getPosition(),
+        zIndex: '999',
         '&::before': {
           content: '""',
           borderLeft: '10px solid transparent',
@@ -39,7 +40,9 @@ function ProductLabel({ position }) {
         }
       }}
     >
-      Sale
+      <Typography variant="body1">
+        Sale
+      </Typography>
     </Box>
   );
 }

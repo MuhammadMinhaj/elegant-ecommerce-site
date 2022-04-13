@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 function ActionButton({ icon, handleClick }) {
   return (
     <Box
+      px="0.5rem"
       borderRadius="50%"
       sx={{
         overflow: 'hidden'
@@ -37,11 +38,11 @@ function ActionButton({ icon, handleClick }) {
   );
 }
 
-function Actions() {
+function Actions({ position }) {
   const router = useRouter();
 
   return (
-    <Box display="flex" alignItems="center" justifyContent="space-around">
+    <Box display="flex" alignItems="center" justifyContent={position || 'center'}>
       <ActionButton icon={<ShoppingCartIcon />} />
       <ActionButton icon={<VisibilityIcon />} handleClick={() => router.push('/product/demo')} />
       <ActionButton icon={<FavoriteIcon />} />
