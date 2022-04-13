@@ -3,7 +3,7 @@ import {
 } from '@mui/material';
 
 function Title({
-  title, icon, endActions, tColor
+  title, icon, endActions, tColor, isNotDivider
 }) {
   const theme = useTheme();
   const isSM = useMediaQuery(theme.breakpoints.down('sm'));
@@ -22,7 +22,10 @@ function Title({
         </Box>
         {endActions}
       </Box>
-      <Divider />
+      {
+        !isNotDivider && <Divider />
+      }
+
     </Box>
   );
 }

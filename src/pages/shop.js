@@ -1,8 +1,8 @@
 import Advertisement from '../components/Advertisement/Advertisement';
-import BestSellers from '../components/Home/BestSeller/BestSeller';
-import FeaturedProduct from '../components/Home/FeaturedProduct';
 import Layout from '../components/Layout/Layout';
 import AllCategories from '../components/Shop/AllCategories/Categories';
+import BestSellers from '../components/Shop/BestSeller/BestSeller';
+import FeaturedProduct from '../components/Shop/FeaturedProduct';
 // import BuildingTools from '../components/Shop/BuildingTools/BuildingTools';
 // import DiscountOffer from '../components/Shop/DiscountOffer/DiscountOffer';
 // import DiscountOnAllProduct from '../components/Shop/DiscountOffer/DiscountOnAllProduct';
@@ -22,6 +22,7 @@ function ShopPage() {
       <FeaturedProduct />
       <Advertisement />
       <BestSellers />
+      <Advertisement />
 
       {/* <TodayDeals />
       <PopularProduct title="MOST POPULAR FOR MAN" leftBannerImgSrc="/MostPopularForMan/MostPopularForMan.jpg" bannerTxtTitle="All Product Discount - 30%" />

@@ -30,7 +30,7 @@ function FeaturedProduct() {
   return (
     <Box bgcolor="var(--white)">
       <Box className="container">
-        <Title title="Featured Products" icon={<ShoppingCartIcon fontSize="inherit" />} endActions={<ViewFilter isNonePagination handleClickToViewChange={handleClickToViewChange} />} />
+        <Title title="Featured Products" icon={<ShoppingCartIcon fontSize="inherit" />} endActions={<ViewFilter isNonePagination handleClickToViewChange={handleClickToViewChange} />} isNotDivider />
         <Box p="1rem">
           {
           isGrid ? (

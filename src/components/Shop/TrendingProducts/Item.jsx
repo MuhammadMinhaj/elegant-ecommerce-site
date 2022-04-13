@@ -5,7 +5,7 @@ function Item({
 }) {
   return (
 
-    <Box display="flex" width="600px" alignItems="center">
+    <Box display="flex" width="200px" alignItems="center">
       <Box sx={{
         backgroundImage: `url("${imgSrc}")`,
         backgroundSize: 'cover',

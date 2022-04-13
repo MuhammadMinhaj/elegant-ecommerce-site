@@ -7,9 +7,9 @@ import TrendingTitle from './TrendingTitle';
 
 function Products() {
   const theme = useTheme();
-  const isMD = useMediaQuery(theme.breakpoints.down('md'));
+  const isSM = useMediaQuery(theme.breakpoints.down('sm'));
   return (
-    <Box display={isMD ? 'block' : 'flex'}>
+    <Box display={isSM ? 'block' : 'flex'}>
       <Item name="Balltip nullaelit frankfu" imgSrc="https://opencart.opencartworks.com/themes/so_flashmart/image/cache/catalog/demo/product/2-200x200.jpg" price="$300" discount="10" />
       <Item name="Balltip nullaelit frankfu" imgSrc="https://opencart.opencartworks.com/themes/so_flashmart/image/cache/catalog/demo/product/1-200x200.jpg" price="$300" discount="10" />
 
@@ -33,7 +33,6 @@ function TrendingProduct() {
           {
             isMD ? (
               <Box>
-
                 <Typography sx={{
                   fontSize: '16px',
                   fontWeight: '700',
@@ -46,7 +45,12 @@ function TrendingProduct() {
                   Trending This Month
                 </Typography>
               </Box>
-            ) : <TrendingTitle />
+            ) : (
+              <>
+                <TrendingTitle />
+                <Box width="1rem" />
+              </>
+            )
           }
 
           <Box flexGrow="1">

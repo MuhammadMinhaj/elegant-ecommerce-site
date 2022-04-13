@@ -41,6 +41,7 @@ function BestSeller() {
     <Box bgcolor="var(--white)" py="2rem">
       <Box className="container">
         <Title
+          isNotDivider
           title={options[selectedTab]}
           icon={<StarIcon fontSize="inherit" />}
           endActions={(
