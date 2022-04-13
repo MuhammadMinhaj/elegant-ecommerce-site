@@ -7,7 +7,7 @@ import BecomeASeller from './BecomeASeller/BecomeASeller';
 // import BestSeller from './BestSeller/BestSeller';
 // import BussinessToBussiness from './BussinessToBussiness/BussinessToBussiness';
 import ClientTestimonials from './ClientTestimonials/ClientTestimonials';
-import DropShippingWork from './DropShippingWork';
+import DropShippingWork from './DropshippingWork/DropshippingWork';
 // import FeaturedProduct from './FeaturedProduct';
 import FeatureStrip from './FeatureStrip/FeatureStrip';
 import ProductsLavel from './ProductsLavel/ProductsLavel';

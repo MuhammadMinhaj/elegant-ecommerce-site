@@ -3,7 +3,7 @@ import {
 } from '@mui/material';
 
 function Title({
-  title, icon, endActions, tColor, isNotDivider
+  title, subTitle, icon, endActions, tColor, isNotDivider
 }) {
   const theme = useTheme();
   const isSM = useMediaQuery(theme.breakpoints.down('sm'));
@@ -17,6 +17,7 @@ function Title({
           <Box width="1rem" />
           <Box>
             <Typography variant={isSM ? 'h5' : 'h4'} component="h2" sx={{ fontWeight: '600', textTransform: 'uppercase' }} color={tColor || 'var(--text-head)'}>{title || 'Title'}</Typography>
+            {subTitle && <Typography variant="subtitle1" color="var(--text-pera)">{subTitle}</Typography>}
           </Box>
 
         </Box>
