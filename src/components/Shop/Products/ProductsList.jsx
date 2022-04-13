@@ -14,7 +14,7 @@ function a11yProps(index) {
   };
 }
 
-function BestSeller() {
+function ProductList({ title }) {
   const theme = useTheme();
   const isMD = useMediaQuery(theme.breakpoints.down('md'));
   const [isGrid, setGrid] = useState(false);
@@ -42,7 +42,7 @@ function BestSeller() {
       <Box className="container">
         <Title
           isNotDivider
-          title={options[selectedTab]}
+          title={title}
           icon={<StarIcon fontSize="inherit" />}
           endActions={(
             <Box color="var(--secondary)" display="flex">
@@ -58,4 +58,4 @@ function BestSeller() {
   );
 }
 
-export default BestSeller;
+export default ProductList;
