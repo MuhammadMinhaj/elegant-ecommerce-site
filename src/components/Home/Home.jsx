@@ -5,8 +5,7 @@ import Slider from '../Slider/Slider';
 import TopCategory from '../TopCategory/TopCategory';
 import BecomeADistributor from './BecomeADistributor/BecomeADistributor';
 import BecomeASeller from './BecomeASeller/BecomeASeller';
-// import BestSeller from './BestSeller/BestSeller';
-// import BussinessToBussiness from './BussinessToBussiness/BussinessToBussiness';
+import BusinessToBusiness from './BusinessToBusiness/BusinessToBusiness';
 import ClientTestimonials from './ClientTestimonials/ClientTestimonials';
 import DropShippingWork from './DropshippingWork/DropshippingWork';
 import FeaturedProducts from './FeaturedProducts/FeaturedProducts';
@@ -23,9 +22,10 @@ function Home() {
       <TopCategory />
       <FeaturedProducts />
       {/* <ProductsLavel /> */}
+      <BusinessToBusiness />
       <DropShippingWork />
-      <BecomeADistributor />
       <BecomeASeller />
+      <BecomeADistributor />
       <ClientTestimonials />
       <Partners />
       <RecentRatesSalesProduct />
@@ -44,7 +44,6 @@ function Home() {
       {/* <FeaturedProduct title="Featured Products" /> */}
 
       {/* <BestSeller /> */}
-      {/* <BussinessToBussiness /> */}
       {/* <BestSellers /> */}
 
       {/* <MostRecentProduct /> */}
