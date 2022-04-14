@@ -7,7 +7,7 @@ import GridProductItem from '../../DynamicCategory/Product/Item/GridItem';
 
 function FeaturedProducts() {
   return (
-    <Box bgcolor="var(--white)">
+    <Box>
       <Box className="container">
         <Title title="Featured Products" icon={<ShoppingCartIcon fontSize="inherit" />} endActions={<ArrowActions />} />
         <Grid container spacing={2}>
