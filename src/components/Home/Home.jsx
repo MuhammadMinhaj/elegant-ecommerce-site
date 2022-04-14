@@ -3,6 +3,7 @@ import Slider from '../Slider/Slider';
 // import BestSellers from '../Store/BestSellers/BestSellers';
 // import MostRecentProduct from '../Store/MostRecentProduct/MostRecentProduct';
 import TopCategory from '../TopCategory/TopCategory';
+import BecomeADistributor from './BecomeADistributor/BecomeADistributor';
 import BecomeASeller from './BecomeASeller/BecomeASeller';
 // import BestSeller from './BestSeller/BestSeller';
 // import BussinessToBussiness from './BussinessToBussiness/BussinessToBussiness';
@@ -23,6 +24,7 @@ function Home() {
       <FeaturedProducts />
       {/* <ProductsLavel /> */}
       <DropShippingWork />
+      <BecomeADistributor />
       <BecomeASeller />
       <ClientTestimonials />
       <Partners />
