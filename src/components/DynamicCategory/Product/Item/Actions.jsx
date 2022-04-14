@@ -1,3 +1,4 @@
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
@@ -45,6 +46,7 @@ function Actions({ position }) {
     <Box display="flex" alignItems="center" justifyContent={position || 'center'}>
       <ActionButton icon={<ShoppingCartOutlinedIcon />} />
       <ActionButton icon={<VisibilityOutlinedIcon />} handleClick={() => router.push('/product/demo')} />
+      <ActionButton icon={<CompareArrowsIcon />} />
       <ActionButton icon={<FavoriteBorderOutlinedIcon />} />
     </Box>
   );
