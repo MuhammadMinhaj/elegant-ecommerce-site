@@ -4,7 +4,7 @@ import Products from './Products';
 
 function RecentRatesSalesProduct() {
   return (
-    <Box bgcolor="var(--white)">
+    <Box>
       <Box className="container" py="2rem">
         <Grid container spacing={4}>
           <Products title="Recent Products" products={productsData?.products?.slice(0, 5)} />

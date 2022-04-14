@@ -5,10 +5,12 @@ import CurrencyFormat from 'react-currency-format';
 import lib from '../../../../lib';
 
 const { getDicountedPrice } = lib.methods;
-function ItemBody({ title, price, discount }) {
+function ItemBody({
+  title, price, discount, ratings
+}) {
   return (
     <Box>
-      <Rating name="size-small" defaultValue={3} size="small" readOnly />
+      <Rating name="size-small" defaultValue={ratings} size="small" readOnly />
       <Box>
         <Typography component="a" href="/" sx={{ '&:hover': { color: 'var(--secondary)' } }} variant="subtitle1" color="var(--text-head)">{title}</Typography>
       </Box>
