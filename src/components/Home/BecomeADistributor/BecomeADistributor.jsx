@@ -1,6 +1,11 @@
-import { Box, Grid, Typography } from '@mui/material';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import {
+  Box, Grid, Typography, useMediaQuery, useTheme
+} from '@mui/material';
 
 function BecomeADistributor() {
+  const theme = useTheme();
+  const isMD = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <Box py="1rem" bgcolor="var(--white)">
       <Box className="container">
@@ -12,8 +17,14 @@ function BecomeADistributor() {
             </Box>
           </Grid>
           <Grid item sm={12} md={7}>
-            <Box display="flex" alignItems="center" height="100%">
-              <Typography variant="h1" color="var(--secondary)">How to become a distributor in 2022</Typography>
+            <Box display="flex" justifyContent="center" alignItems="flex-start" height="100%" flexDirection="column">
+              <Typography variant={isMD ? 'h3' : 'h1'} color="var(--secondary)">How to become a distributor in 2022</Typography>
+              <Box height="1rem" />
+              <Box component="button" className="custom-btn" display="flex" alignItems="center">
+                <CheckCircleIcon />
+                <Box component="span" width="1rem" />
+                Apply Now
+              </Box>
             </Box>
           </Grid>
         </Grid>
