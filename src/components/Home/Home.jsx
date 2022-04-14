@@ -8,22 +8,25 @@ import BecomeASeller from './BecomeASeller/BecomeASeller';
 // import BussinessToBussiness from './BussinessToBussiness/BussinessToBussiness';
 import ClientTestimonials from './ClientTestimonials/ClientTestimonials';
 import DropShippingWork from './DropshippingWork/DropshippingWork';
+import FeaturedProducts from './FeaturedProducts/FeaturedProducts';
 // import FeaturedProduct from './FeaturedProduct';
 import FeatureStrip from './FeatureStrip/FeatureStrip';
-import ProductsLavel from './ProductsLavel/ProductsLavel';
+// import ProductsLavel from './ProductsLavel/ProductsLavel';
+import RecentRatesSalesProduct from './RecentRatesSalesProduct/RecentRatesSalesProduct';
 
 function Home() {
   return (
     <div className="homepage-main">
       <Slider />
       <FeatureStrip />
-
       <TopCategory />
-      <ProductsLavel />
+      <FeaturedProducts />
+      {/* <ProductsLavel /> */}
       <DropShippingWork />
       <BecomeASeller />
       <ClientTestimonials />
       <Partners />
+      <RecentRatesSalesProduct />
 
       {/* <div className="featured-section">
         <Container>
