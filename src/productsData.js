@@ -4,7 +4,7 @@ const productsData = [
     price: 800,
     discount: 15,
     ratings: 3,
-    images: ['https://www.startech.com.bd/image/cache/catalog/laptop/apple/macbook-air/MGN73/macbook-mgn73Zp-a-228x228.jpg'],
+    images: ['https://www.startech.com.bd/image/cache/catalog/laptop/apple/macbook-air/MGN73/macbook-mgn73Zp-a-228x228.jpg', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
     path: '/',
     statusText: 'New',
     statusType: 'news'
