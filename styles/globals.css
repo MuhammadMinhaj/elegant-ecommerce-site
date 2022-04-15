@@ -10,6 +10,7 @@
 :root {
   --white: #fff;
   --white-gray: #adb5bd;
+  --white-border: #ededed;
   --primary: #101823;
   --secondary: #d23f57;
   --secondary-deep: #fe2424;
