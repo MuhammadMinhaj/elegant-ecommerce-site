@@ -1,13 +1,13 @@
 import { Box, Typography } from '@mui/material';
 
 function Item({
-  name, price, imgSrc, discount
+  title, price, images, discount
 }) {
   return (
 
-    <Box display="flex" width="200px" alignItems="center">
+    <Box display="flex" width="100%" alignItems="center">
       <Box sx={{
-        backgroundImage: `url("${imgSrc}")`,
+        backgroundImage: `url("${images[0]}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '80px',
@@ -17,7 +17,7 @@ function Item({
         {/* <Box component="img" src={imgSrc} maxWidth="80px" maxHeight="auto" width="100%" /> */}
       </Box>
       <Box flexGrow="1">
-        <Typography sx={{ lineHeight: '1' }} variant="subtitle1" color="var(--text-head)">{name}</Typography>
+        <Typography sx={{ lineHeight: '1' }} variant="subtitle1" color="var(--text-head)">{title}</Typography>
         <Typography sx={{ lineHeight: '1' }} variant="h6" color={discount ? 'red' : 'var(--primary)'}>{price}</Typography>
         {
           discount && (

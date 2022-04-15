@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 
 function TrendingTitle() {
   return (
-    <Box position="relative">
+    <Box position="relative" minWidth="150px">
       <Typography sx={{
         background: '#fe2424',
         padding: '5px 10px',
