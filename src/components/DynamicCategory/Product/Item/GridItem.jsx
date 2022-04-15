@@ -46,7 +46,7 @@ function Product({
     >
       <Box>
         {
-        statusText && <ProductLabel position="right" status={statusType} text={statusType} />
+        statusText && <ProductLabel position="right" status={statusType} text={statusText} />
       }
 
         <Box
