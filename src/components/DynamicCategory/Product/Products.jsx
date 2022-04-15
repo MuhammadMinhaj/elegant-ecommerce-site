@@ -15,12 +15,12 @@ function ResponsiveGridItem(props) {
 
 function DynamicCategory() {
   const [isGrid, setGrid] = useState(false);
-  const handleClickToViewChange = (currentViewStatus) => {
-    setGrid(currentViewStatus);
+  const handleClickToViewChange = () => {
+    setGrid(!isGrid);
   };
   return (
     <Box bgcolor="var(--white)" borderRadius="0.5rem">
-      <ViewFilter handleClickToViewChange={handleClickToViewChange} />
+      <ViewFilter isGrid={isGrid} handleClickToViewChange={handleClickToViewChange} />
       <Divider />
       <Box p="1rem">
         {
