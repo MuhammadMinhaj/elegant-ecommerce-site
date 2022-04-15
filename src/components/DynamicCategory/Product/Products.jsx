@@ -38,9 +38,7 @@ function DynamicCategory() {
             : productsData?.products?.map((prod) => (
               <TableItem {...prod} withActions />
             ))
-
         }
-
       </Box>
 
     </Box>

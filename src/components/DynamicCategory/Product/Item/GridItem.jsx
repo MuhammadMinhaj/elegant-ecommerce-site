@@ -17,13 +17,15 @@ function Product({
     setOver(false);
   };
   return (
-    <Box position="relative" bgcolor="var(--white)" height="100%" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} border={isOver ? '1px solid #ededed' : '1px solid var(--white)'}>
-      {
+    <Box position="relative" bgcolor="var(--white)" height="100%" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} border={isOver ? '1px solid #ededed' : '1px solid var(--white)'} display="flex" flexDirection="column" justifyContent="space-between">
+      <Box>
+        {
         statusText && <ProductLabel position="right" status={statusType} text={statusType} />
       }
-      <Box component="img" width="100%" height="auto" alt="image" src={images ? images[0] : ''} />
-      <Box pb="0.5rem" px="1rem">
-        <ItemBody title={title} price={price} discount={discount} ratings={ratings} path={path} />
+        <Box component="img" width="100%" height="auto" alt="image" src={images ? images[0] : ''} />
+        <Box pb="0.5rem" px="1rem">
+          <ItemBody title={title} price={price} discount={discount} ratings={ratings} path={path} />
+        </Box>
       </Box>
       {
         withActions && (

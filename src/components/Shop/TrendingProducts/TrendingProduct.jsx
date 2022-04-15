@@ -1,26 +1,31 @@
 import {
   Box, Typography, useMediaQuery, useTheme
 } from '@mui/material';
-import Carousel from 'react-material-ui-carousel';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import productsData from '../../../productsData';
 import Item from './Item';
 import TrendingTitle from './TrendingTitle';
 
-function Products() {
-  const theme = useTheme();
-  const isSM = useMediaQuery(theme.breakpoints.down('sm'));
-  return (
-    <Box display={isSM ? 'block' : 'flex'} sx={{ alignItems: 'center', mt: '0.5rem' }}>
-      <Item name="Balltip nullaelit frankfu" imgSrc="https://opencart.opencartworks.com/themes/so_flashmart/image/cache/catalog/demo/product/2-200x200.jpg" price="$300" discount="10" />
-      <Item name="Balltip nullaelit frankfu" imgSrc="https://opencart.opencartworks.com/themes/so_flashmart/image/cache/catalog/demo/product/1-200x200.jpg" price="$300" discount="10" />
-
-      <Item name="Dicta vidisse inermis" imgSrc="https://opencart.opencartworks.com/themes/so_flashmart/image/cache/catalog/demo/product/17-200x200.jpg" price="$400" discount="10" />
-
-      <Item name="Dicta vidisse inermis" imgSrc="https://opencart.opencartworks.com/themes/so_flashmart/image/cache/catalog/demo/product/17-200x200.jpg" price="$800" />
-      <Item name="Balltip nullaelit frankfu" imgSrc="https://opencart.opencartworks.com/themes/so_flashmart/image/cache/catalog/demo/product/1-200x200.jpg" price="$300" discount="10" />
-    </Box>
-  );
-}
-
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 9
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 3
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
 function TrendingProduct() {
   const theme = useTheme();
   const isMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -53,11 +58,16 @@ function TrendingProduct() {
             )
           }
 
-          <Box flexGrow="1">
-            <Carousel cycleNavigation animation="slide" autoPlay={false} indicators={false} height="100px" fullHeightHover>
-              <Products />
-              <Products />
-              <Products />
+          <Box width="100%">
+            <Carousel
+              responsive={responsive}
+              ssr // means to render carousel on server-side.
+              infinite
+            >
+              {productsData?.products?.map((prod) => (
+                <Item {...prod} />
+              ))}
+
             </Carousel>
           </Box>
         </Box>
