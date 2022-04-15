@@ -46,7 +46,7 @@ function Product({
       height="100%"
     >
       {
-        statusText && <ProductLabel position="right" status={statusType} text={statusType} />
+        statusText && <ProductLabel position="right" status={statusType} text={statusText} />
       }
 
       <Box maxWidth="100px">
