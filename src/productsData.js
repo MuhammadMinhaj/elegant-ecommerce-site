@@ -1,30 +1,40 @@
 const productsData = [
   {
-    title: 'Apple MacBook Air 13.3-Inch',
+    title: 'Product title will be showed',
     price: 800,
     discount: 15,
     ratings: 3,
-    images: ['https://www.startech.com.bd/image/cache/catalog/laptop/apple/macbook-air/MGN73/macbook-mgn73Zp-a-228x228.jpg', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
+    images: ['/default/product-300x300.png', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
     path: '/',
     statusText: 'New',
     statusType: 'news'
   },
   {
-    title: 'Razer Blade 15 Advanced Model i7',
+    title: 'Product title will be showed',
     price: 500,
     discount: 12,
     ratings: 4,
-    images: ['https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
+    images: ['/default/product-300x300.png', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
     path: '/',
     statusText: 'Hot',
     statusType: 'hots'
   },
   {
-    title: 'Razer Kraken X Headset and DeathAdder',
+    title: 'Product title will be showed',
+    price: 500,
+    discount: null,
+    ratings: 4,
+    images: ['/default/product-300x300.png', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
+    path: '/',
+    statusText: 'Offer',
+    statusType: 'offers'
+  },
+  {
+    title: 'Product title will be showed',
     price: 300,
     discount: 10,
     ratings: 5,
-    images: ['https://www.startech.com.bd/image/cache/catalog/combo/kraken-x-headset-and-deathadder-essential/kraken-x-headset-and-deathadder-essential-228x228.jpg'],
+    images: ['/default/product-300x300.png', 'https://www.startech.com.bd/image/cache/catalog/combo/kraken-x-headset-and-deathadder-essential/kraken-x-headset-and-deathadder-essential-228x228.jpg'],
     path: '/',
     statusText: null,
     statusType: null

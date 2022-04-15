@@ -6,11 +6,11 @@ const leftPosition = {
 const rightPosition = {
   right: '0rem'
 };
-const colors = [['#bb0101', 'white'], ['var(--secondary)', 'white']];
+const colors = [['#bb0101', 'white'], ['green', 'white'], ['blue', 'white']];
 const variants = {
   news: colors[0],
-  offers: colors[0],
-  hots: colors[0]
+  offers: colors[2],
+  hots: colors[1]
 };
 function ProductLabel({ position, status, text }) {
   const getPosition = () => {

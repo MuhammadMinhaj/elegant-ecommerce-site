@@ -29,6 +29,7 @@ function Item({
       >
         {/* <Box component="img" src={imgSrc} maxWidth="80px" maxHeight="auto" width="100%" /> */}
       </Box>
+      <Box width="0.5rem" />
       <Box flexGrow="1">
         <Typography
           sx={{
