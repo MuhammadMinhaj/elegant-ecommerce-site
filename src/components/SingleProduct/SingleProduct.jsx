@@ -1,6 +1,8 @@
 import {
   Box, Divider, Grid, Tab, Tabs, Typography
 } from '@mui/material';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 import { useState } from 'react';
 import Description from './Description';
 import ProductDetail from './ProductDetail/ProductDetail';
@@ -55,6 +57,16 @@ function SingleProductView() {
             </Grid>
             <Grid item md={7}>
               <ProductDetail />
+              <Box py="1rem">
+                <Typography variant="subtitle1" color="text.secondary" py="0.5rem">Tags</Typography>
+                <Stack direction="row" spacing={1}>
+                  <Chip label="Hp" />
+                  <Chip label="Elite" />
+                  <Chip label="Display" />
+                  <Chip label="Monitor" />
+                </Stack>
+              </Box>
+
             </Grid>
           </Grid>
         </Box>

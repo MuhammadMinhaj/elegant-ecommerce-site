@@ -10,18 +10,35 @@ function Product({
   isEnd, title, price, discount, ratings, images, path, statusText, statusType, withActions
 }) {
   const [isOver, setOver] = useState(false);
-  const handleMouseOver = () => {
+  const [isOverOnImg, setOverOnImg] = useState(false);
+
+  const handleMouseOver = (isImg) => {
+    if (isImg) {
+      return setOverOnImg(true);
+    }
     setOver(true);
   };
-  const handleMouseLeave = () => {
+  const handleMouseLeave = (isImg) => {
+    if (isImg) {
+      return setOverOnImg(false);
+    }
     setOver(false);
   };
+  const getCurrentThumbnail = () => {
+    if (isOverOnImg) {
+      if (images[1]) {
+        return images[1];
+      }
+    }
+    return images[0];
+  };
+
   return (
 
     <Box
       component="div"
-      onMouseOver={handleMouseOver}
-      onMouseLeave={handleMouseLeave}
+      onMouseOver={() => handleMouseOver(false)}
+      onMouseLeave={() => handleMouseLeave(false)}
       borderBottom={`${isEnd ? '0px' : '1px'} solid #ededed`}
       display="flex"
       position="relative"
@@ -33,7 +50,16 @@ function Product({
       }
 
       <Box maxWidth="100px">
-        <Box component="img" py="0.25rem" width="100%" height="auto" alt={title} src={images ? images[0] : ''} />
+        <Box
+          onMouseOver={() => handleMouseOver(true)}
+          onMouseLeave={() => handleMouseLeave(true)}
+          component="img"
+          py="0.25rem"
+          width="100%"
+          height="auto"
+          alt={title}
+          src={images ? getCurrentThumbnail() : ''}
+        />
       </Box>
 
       <Box p="0.5rem">

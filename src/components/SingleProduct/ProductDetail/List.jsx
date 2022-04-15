@@ -19,6 +19,7 @@ function List() {
       <Item keyName="Brand" keyValue="APPLE" />
       <Item keyName="Product Code" keyValue="sf7843t5bas" />
       <Item keyName="Availability" keyValue="In Stack" />
+      <Item keyName="Color" keyValue="Read | Blue | Yellow" />
     </Box>
   );
 }
