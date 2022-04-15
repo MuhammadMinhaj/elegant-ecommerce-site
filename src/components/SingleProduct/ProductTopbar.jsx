@@ -1,13 +1,20 @@
 import {
-  BookmarkBorder as BookmarkBorderIcon,
   Facebook as FacebookIcon,
   Twitter as TwitterIcon
 } from '@mui/icons-material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {
-  Box, Button, IconButton, Typography
+  Box, IconButton, Typography
 } from '@mui/material';
+import { useState } from 'react';
 
 function ProductTopbar() {
+  const [isHeart, setHeart] = useState(false);
+
+  const handleClickToggleHeart = () => {
+    setHeart(!isHeart);
+  };
   return (
     <Box display="flex" justifyContent="space-between" px="1rem">
       <Box display="flex" alignItems="center">
@@ -23,8 +30,13 @@ function ProductTopbar() {
         </Box>
       </Box>
 
-      <Box py="0.5rem">
-        <Button startIcon={<BookmarkBorderIcon />}>Save</Button>
+      <Box py="0.5rem" color="var(--secondary)">
+        <IconButton
+          onClick={handleClickToggleHeart}
+          color="inherit"
+        >
+          {isHeart ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+        </IconButton>
       </Box>
     </Box>
   );

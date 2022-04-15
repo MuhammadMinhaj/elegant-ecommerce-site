@@ -1,9 +1,8 @@
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {
   Box,
-  CardActionArea,
-  Divider,
-  Grow,
-  Paper,
+  CardActionArea, Grow, IconButton, Paper,
   useMediaQuery,
   useTheme
 } from '@mui/material';
@@ -30,7 +29,7 @@ function ImageItem({ path, getImgIndex, ind }) {
 
 function ImageItemContainer({ getImgIndex, images }) {
   return (
-    <Box display="flex" justifyContent="flex-start" mt="1rem">
+    <Box display="flex" justifyContent="flex-start">
       {images?.map((img, ind) => (
         <ImageItem key={img} path={img} getImgIndex={getImgIndex} ind={ind} />
       ))}
@@ -41,6 +40,7 @@ function ImageItemContainer({ getImgIndex, images }) {
 function Product({ images, name }) {
   const [imgIndex, setImgIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
+  const [isHeart, setHeart] = useState(false);
   const theme = useTheme();
   const isMD = useMediaQuery(theme.breakpoints.down('md'));
   const [visible, setVisible] = useState(false);
@@ -65,25 +65,45 @@ function Product({ images, name }) {
       alt: ''
     }
   ));
+  const handleClickToggleHeart = () => {
+    setHeart(!isHeart);
+  };
   return (
     <Box height="100%" display="flex" flexDirection="column" justifyContent="space-between">
 
       <ReactViewer
         visible={visible}
-        onClose={() => { setVisible(false); }}
+        onClose={() => setVisible(false)}
         images={tempImages}
         zIndex={99999}
         activeIndex={imgIndex}
+        defaultScale={1.25}
       />
 
       {images && (
         <Grow in={animate}>
-          <Box component="img" sx={{ cursor: 'pointer' }} src={images[imgIndex]} onClick={() => setVisible(true)} width="100%" height="auto" />
+          <Box sx={{ position: 'relative' }}>
+            <Box sx={{
+              position: 'absolute', top: '0px', left: '0px', color: 'var(--secondary)'
+            }}
+            >
+              <IconButton
+                onClick={handleClickToggleHeart}
+                color="inherit"
+              >
+                {
+                 isHeart ? <FavoriteIcon /> : <FavoriteBorderIcon />
+                }
+              </IconButton>
+            </Box>
+            <Box component="img" sx={{ cursor: 'pointer' }} src={images[imgIndex]} onClick={() => setVisible(true)} width="100%" height="auto" />
+          </Box>
+
         </Grow>
       )}
 
       <Box>
-        <Divider />
+        {/* <Divider /> */}
         <ImageItemContainer getImgIndex={getImgIndex} images={images} />
       </Box>
     </Box>
