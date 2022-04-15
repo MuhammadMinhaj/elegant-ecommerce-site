@@ -1,6 +1,7 @@
 import {
-  Box, Grow
+  Box
 } from '@mui/material';
+import Zoom from '@mui/material/Zoom';
 import { useState } from 'react';
 import Actions from './Actions';
 import ItemBody from './ItemBody';
@@ -44,34 +45,48 @@ function Product({
       flexDirection="column"
       justifyContent="space-between"
     >
+
       <Box>
         {
-        statusText && <ProductLabel position="right" status={statusType} text={statusText} />
+        statusText && <ProductLabel position="right" status={statusType} text={statusType} />
       }
 
         <Box
-          onMouseOver={() => handleMouseOver(true)}
-          onMouseLeave={() => handleMouseLeave(true)}
-          component="img"
-          width="100%"
-          height="auto"
-          alt="image"
-          src={images ? getCurrentThumbnail() : ''}
-        />
+          position="relative"
+        >
+          {
+        withActions && (
+        <Zoom in={isOver}>
+          <Box
+            onMouseOver={() => handleMouseOver(true)}
+            onMouseLeave={() => handleMouseLeave(true)}
+            position="absolute"
+            height="100%"
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            left="0.5rem"
+          >
+            <Actions />
+          </Box>
+        </Zoom>
+        )
+      }
+          <Box
+            onMouseOver={() => handleMouseOver(true)}
+            onMouseLeave={() => handleMouseLeave(true)}
+            component="img"
+            width="100%"
+            height="auto"
+            alt="image"
+            src={images ? getCurrentThumbnail() : ''}
+          />
+        </Box>
 
         <Box pb="0.5rem" px="1rem">
           <ItemBody title={title} price={price} discount={discount} ratings={ratings} path={path} />
         </Box>
       </Box>
-      {
-        withActions && (
-        <Grow in={isOver}>
-          <Box pb="0.5rem">
-            <Actions />
-          </Box>
-        </Grow>
-        )
-      }
 
     </Box>
   );

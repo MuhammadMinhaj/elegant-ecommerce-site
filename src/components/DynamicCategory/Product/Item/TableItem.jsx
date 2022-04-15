@@ -1,6 +1,7 @@
 import {
-  Box, Grow
+  Box
 } from '@mui/material';
+import Zoom from '@mui/material/Zoom';
 import { useState } from 'react';
 import Actions from './Actions';
 import ItemBody from './ItemBody';
@@ -49,7 +50,7 @@ function Product({
         statusText && <ProductLabel position="right" status={statusType} text={statusText} />
       }
 
-      <Box maxWidth="100px">
+      <Box maxWidth={withActions ? '150px' : '120px'} position="relative" height="100%">
         <Box
           onMouseOver={() => handleMouseOver(true)}
           onMouseLeave={() => handleMouseLeave(true)}
@@ -60,19 +61,25 @@ function Product({
           alt={title}
           src={images ? getCurrentThumbnail() : ''}
         />
+        {
+        withActions && (
+        <Zoom in={isOver}>
+          <Box
+            onMouseOver={() => handleMouseOver(true)}
+            onMouseLeave={() => handleMouseLeave(true)}
+            position="absolute"
+            left="0.15rem"
+            top="0rem"
+          >
+            <Actions isSmall />
+          </Box>
+        </Zoom>
+        )
+      }
       </Box>
 
       <Box p="0.5rem">
         <ItemBody title={title} price={price} discount={discount} ratings={ratings} path={path} />
-        {
-          withActions && (
-          <Grow in={isOver}>
-            <Box py="0.25rem">
-              <Actions position="left" />
-            </Box>
-          </Grow>
-          )
-        }
       </Box>
     </Box>
 
