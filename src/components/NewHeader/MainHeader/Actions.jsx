@@ -3,7 +3,7 @@ import { Box, IconButton } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import actions from '../../../redux/actions';
 
-const { handleClickToggleDrawer } = actions.appActions;
+const { handleClickToggleDrawer, handleClickToggleUserLoginSignupModal } = actions.appActions;
 function Actions() {
   const dispatch = useDispatch();
 
@@ -13,7 +13,7 @@ function Actions() {
         <FavoriteBorderIcon />
       </IconButton>
 
-      <IconButton>
+      <IconButton onClick={() => dispatch(handleClickToggleUserLoginSignupModal(true))}>
         <PersonOutlineIcon />
       </IconButton>
       <IconButton onClick={() => dispatch(handleClickToggleDrawer())}>

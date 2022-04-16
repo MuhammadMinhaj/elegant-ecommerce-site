@@ -21,6 +21,7 @@ function Cart() {
       <CuponCode />
       <Box height="1rem" />
       <Box>
+        <TextItem title="Total Quantity" amount="20" />
         <TextItem title="Subtotal" amount="$250.00" />
         <TextItem title="Shipping Cost" amount="$100.00" />
         <TextItem title="Discount" amount="$50.00" />
