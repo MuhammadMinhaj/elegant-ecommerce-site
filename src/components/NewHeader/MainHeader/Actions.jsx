@@ -3,20 +3,24 @@ import { Box, IconButton } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import actions from '../../../redux/actions';
 
-const { handleClickToggleDrawer, handleClickToggleUserLoginSignupModal } = actions.appActions;
+const {
+  handleClickToggleCartDrawer,
+  handleClickToggleUserLoginSignupModal,
+  handleClickToggleWishlistDrawer
+} = actions.appActions;
 function Actions() {
   const dispatch = useDispatch();
 
   return (
     <Box display="flex">
-      <IconButton>
+      <IconButton onClick={() => dispatch(handleClickToggleWishlistDrawer())}>
         <FavoriteBorderIcon />
       </IconButton>
 
       <IconButton onClick={() => dispatch(handleClickToggleUserLoginSignupModal(true))}>
         <PersonOutlineIcon />
       </IconButton>
-      <IconButton onClick={() => dispatch(handleClickToggleDrawer())}>
+      <IconButton onClick={() => dispatch(handleClickToggleCartDrawer())}>
         <ShoppingBasketIcon />
       </IconButton>
     </Box>

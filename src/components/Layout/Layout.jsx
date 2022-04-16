@@ -6,6 +6,7 @@ import Footer from '../Footer/NewFooter';
 import NewHeader from '../NewHeader/Header';
 import UserLoginModal from '../User/Login/LoginModal';
 import UserSignupModal from '../User/Signup/SignupModal';
+import WishlistDrawer from '../User/WishList/WishListDrawer';
 
 function Layout({ children }) {
   return (
@@ -15,6 +16,7 @@ function Layout({ children }) {
       <CartDrawer />
       <UserLoginModal />
       <UserSignupModal />
+      <WishlistDrawer />
       {/* <TopMenu />
       <Navbar /> */}
       {children}
