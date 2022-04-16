@@ -7,7 +7,7 @@ const product = {
   color: 'Silver',
   size: 'M',
   price: '$220',
-  imgSrc: 'https://www.startech.com.bd/image/cache/catalog/laptop/apple/macbook-air/MGN73/macbook-mgn73Zp-a-500x500.jpg'
+  imgSrc: '/default/product-150x150.png'
 };
 
 function CartProduct() {
@@ -20,7 +20,7 @@ function CartProduct() {
     setProducts((prod) => prod.filter((p) => p?.id !== id));
   };
   return (
-    <Box sx={{ maxHeight: '400px', overflowY: 'auto' }}>
+    <Box px="0.5rem">
       {
         products?.map((prod) => (
           <CartProdItem {...prod} handleClickDelete={() => handleClickDelete(prod?.id)} />

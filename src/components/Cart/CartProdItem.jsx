@@ -3,7 +3,8 @@ import {
   Box, Button, ButtonGroup, Divider, IconButton, Typography
 } from '@mui/material';
 import { useState } from 'react';
-import lib from '../../../lib';
+import lib from '../../lib';
+import Link from '../Common/Link';
 
 const { textSorter: { getTruncateText } } = lib;
 
@@ -23,11 +24,10 @@ function CartProdItem({
 
       <Box display="flex" justifyContent="space-between" py="0.5rem">
         <Box display="flex">
-          <Box src={imgSrc || ''} maxWidth="100px" width="100%" height="auto" component="img" />
+          <Box src={imgSrc || ''} maxWidth="120px" width="100%" height="auto" component="img" />
           <Box width="1rem" />
           <Box>
-            <Typography variant="subtitel1">{getTruncateText(title, 80) || 'N/A'}</Typography>
-
+            <Link title={getTruncateText(title, 50) || 'N/A'} path="/" />
             <Typography variant="caption" component="div">
               Size:
               {' '}
@@ -60,7 +60,7 @@ function CartProdItem({
               <Button onClick={() => handleClickToggle(false)}>-</Button>
             </ButtonGroup>
           </Box>
-          <IconButton onClick={handleClickDelete} color="error">
+          <IconButton size="small" onClick={handleClickDelete} color="error">
             <CloseIcon />
           </IconButton>
         </Box>

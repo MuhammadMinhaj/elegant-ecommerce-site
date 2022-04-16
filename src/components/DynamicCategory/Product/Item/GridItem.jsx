@@ -83,7 +83,7 @@ function Product({
           />
         </Box>
 
-        <Box pb="0.5rem" px="1rem">
+        <Box p="0.75rem">
           <ItemBody title={title} price={price} discount={discount} ratings={ratings} path={path} />
         </Box>
       </Box>

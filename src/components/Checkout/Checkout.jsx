@@ -1,7 +1,7 @@
 import { Box, Grid } from '@mui/material';
 import AdditionalInformation from './AdditionalInformation';
 import BillingDetail from './BillingDetail';
-import Cart from './Cart/Cart';
+import Cart from './Cart';
 import PaymentMethod from './PaymentMethod/PaymentMethods';
 import UnauthenticatedButtons from './PaymentMethod/UnauthenticatedButtons';
 import ShippingDetail from './ShippingDetail';

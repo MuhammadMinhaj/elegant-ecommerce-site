@@ -1,5 +1,4 @@
 import { Box, Divider, Typography } from '@mui/material';
-import CartProduct from './CartProduct';
 import CuponCode from './CuponCode';
 
 function TextItem({ title, amount }) {
@@ -16,10 +15,8 @@ function Cart() {
 
     <Box
       bgcolor="var(--white)"
-      p="2rem"
       borderRadius="0.5rem"
     >
-      <CartProduct />
       <Box height="1rem" />
       <CuponCode />
       <Box height="1rem" />
@@ -37,6 +34,7 @@ function Cart() {
           <Typography variant="subtitle1">$350</Typography>
         </Box>
       </Box>
+
     </Box>
 
   );

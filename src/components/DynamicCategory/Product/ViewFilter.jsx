@@ -5,7 +5,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 
-function ViewFilter({ handleClickToViewChange, isNonePagination }) {
+function ViewFilter({ isGrid, handleClickToViewChange, isNonePagination }) {
   const [age, setAge] = useState(25);
 
   const handleChange = (event) => {
@@ -30,13 +30,11 @@ function ViewFilter({ handleClickToViewChange, isNonePagination }) {
         )
       }
 
-      <Box display="flex" alignItems="center">
-        <IconButton size="small" onClick={() => handleClickToViewChange(false)}>
-          <TableRowsIcon />
-        </IconButton>
-        <Box height="1.25rem" width="1px" bgcolor="#d1d1d1" />
-        <IconButton size="small" onClick={() => handleClickToViewChange(true)}>
-          <GridViewSharpIcon />
+      <Box>
+        <IconButton size="small" onClick={handleClickToViewChange}>
+          {
+            isGrid ? <TableRowsIcon /> : <GridViewSharpIcon />
+          }
         </IconButton>
       </Box>
     </Box>
