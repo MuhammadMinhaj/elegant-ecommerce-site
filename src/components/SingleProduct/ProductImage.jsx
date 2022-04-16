@@ -2,9 +2,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {
   Box,
-  CardActionArea, Grow, IconButton, Paper,
-  useMediaQuery,
-  useTheme
+  CardActionArea, Grow, IconButton, Paper
 } from '@mui/material';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
@@ -41,8 +39,6 @@ function Product({ images, name }) {
   const [imgIndex, setImgIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
   const [isHeart, setHeart] = useState(false);
-  const theme = useTheme();
-  const isMD = useMediaQuery(theme.breakpoints.down('md'));
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
