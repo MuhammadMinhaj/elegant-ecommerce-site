@@ -4,6 +4,8 @@
 import CartDrawer from '../Cart/CartDrawer';
 import Footer from '../Footer/NewFooter';
 import NewHeader from '../NewHeader/Header';
+import UserLoginModal from '../User/Login/LoginModal';
+import UserSignupModal from '../User/Signup/SignupModal';
 
 function Layout({ children }) {
   return (
@@ -11,6 +13,8 @@ function Layout({ children }) {
 
       <NewHeader />
       <CartDrawer />
+      <UserLoginModal />
+      <UserSignupModal />
       {/* <TopMenu />
       <Navbar /> */}
       {children}

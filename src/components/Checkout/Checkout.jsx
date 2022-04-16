@@ -3,9 +3,9 @@ import AdditionalInformation from './AdditionalInformation';
 import BillingDetail from './BillingDetail';
 import Cart from './Cart';
 import PaymentMethod from './PaymentMethod/PaymentMethods';
-import UnauthenticatedButtons from './PaymentMethod/UnauthenticatedButtons';
 import ShippingDetail from './ShippingDetail';
 import ShippingMethod from './ShippingMethod';
+import UnauthenticatedButtons from './UnauthenticatedButtons';
 
 function Checkout() {
   return (
