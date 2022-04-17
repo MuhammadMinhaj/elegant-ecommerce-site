@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import { Box, Grid } from '@mui/material';
 import { SwiperSlide } from 'swiper/react';

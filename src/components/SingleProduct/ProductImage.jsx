@@ -35,7 +35,7 @@ function ImageItemContainer({ getImgIndex, images }) {
   );
 }
 
-function Product({ images, name }) {
+function Product({ images }) {
   const [imgIndex, setImgIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
   const [isHeart, setHeart] = useState(false);

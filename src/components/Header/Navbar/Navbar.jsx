@@ -1,153 +1,104 @@
-import {
-  ArrowUpward as ArrowUp,
-  FavoriteBorderOutlined as HeartIcon,
-  MenuOutlined as MenuIcon,
-  PersonOutlined as PersonIcon,
-  ShoppingCart
-} from '@mui/icons-material';
-import React, { Component } from 'react';
-import {
-  Col, Container, Nav, Navbar, Row
-} from 'react-bootstrap';
-import Dropd from 'react-dropd';
+import { Box, useMediaQuery } from '@mui/material';
+import { useEffect, useState } from 'react';
+import CategoryMenu from './CategoryMenu';
+import MoreMenu from './MoreMenu';
 import NavItem from './NavItem';
 
-let navbar;
-let sticky;
-const scroll = 450;
-
-class MainMenu extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      scrollTop: false
-    };
+const navbarData = [
+  {
+    name: 'Home',
+    path: '/'
+  },
+  {
+    name: 'Shop',
+    path: '/shop'
+  },
+  {
+    name: 'Single Product',
+    path: '/product/demo'
+  },
+  {
+    name: 'Category',
+    path: '/category/demo'
+  },
+  {
+    name: 'Checkout',
+    path: '/checkout'
+  },
+  {
+    name: 'User Account',
+    isDropDown: true
+  },
+  {
+    name: 'B2B',
+    path: '/'
+  },
+  {
+    name: 'Contact Us',
+    path: '/'
   }
+];
 
-  componentDidMount() {
-    navbar = document.getElementById('main-navbar');
-    sticky = navbar.offsetTop;
+function Navbar() {
+  const screenTypeOne = useMediaQuery('(max-width:1200px)');
+  const screenTypeTwo = useMediaQuery('(max-width:1100px)');
+  const screenTypeThree = useMediaQuery('(max-width:1000px)');
+  const screenTypeFour = useMediaQuery('(max-width:900px)');
+  const screenTypeFive = useMediaQuery('(max-width:800px)');
+  const isMD = useMediaQuery('(max-width:600px)');
 
-    window.addEventListener('scroll', this.handleSticky);
-    window.addEventListener('scroll', this.handleScrollTop);
-  }
+  const [limit, setLimit] = useState({ min: 0, max: 7 });
+  useEffect(() => {
+    switch (true) {
+      case screenTypeFive:
+        setLimit({ min: 0, max: 2 });
+        break;
+      case screenTypeFour:
+        setLimit({ min: 0, max: 3 });
+        break;
+      case screenTypeThree:
+        setLimit({ min: 0, max: 4 });
+        break;
+      case screenTypeTwo:
+        setLimit({ min: 0, max: 5 });
+        break;
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleSticky);
-    window.removeEventListener('scroll', this.handleScrollTop);
-  }
-
-  handleSticky = () => {
-    if (window.pageYOffset > sticky) {
-      navbar.classList.add('navbar-sticky');
-    } else {
-      navbar.classList.remove('navbar-sticky');
+      case screenTypeOne:
+        setLimit({ min: 0, max: 6 });
+        break;
+      default:
+        setLimit({ min: 0, max: 7 });
     }
-  };
-
-  handleScrollTop = () => {
-    if (window.pageYOffset > scroll) {
-      this.setState({
-        scrollTop: true
-      });
-    } else {
-      this.setState({
-        scrollTop: false
-      });
-    }
-  };
-
-  render() {
-    const { scrollTop } = this.state;
-    const toggleScroll = scrollTop ? <ScrollTop /> : '';
-    return (
-
-      <div className="main-menu" id="main-navbar">
-        <Container>
-          <Row>
-            <Col md={3}>
-              <div className="category-wrapper">
-                <span className="icon">
-                  <MenuIcon />
-                </span>
-                <Dropd
-                  placeholder="Select Category"
-                  onOpen={(list, event) => console.log(list, event)}
-                  list={['Caramel', 'Peanut butter', 'Sundae', 'Oreos']}
-                />
-              </div>
-            </Col>
-            <Col md={9}>
-              <Navbar collapseOnSelect expand="lg">
-                <Row>
-                  <Col md="12">
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                      <Nav className="navbar-main">
-                        <ul className="nav">
-                          <NavItem path="/" name="Home" iconName="fa fa-home" />
-                          <NavItem path="/shop" name="Shop" iconName="fa fa-dollar" />
-                          <NavItem path="/credit-manager" name="B2B" iconName="fa fa-credit-card" />
-                          <NavItem path="/identity-protector" name=" Recent Products" iconName="fa fa-shield" />
-                          <NavItem path="/identity-protector" name="Blog" iconName="fa fa-shield" />
-                          <NavItem path="/identity-protector" name="Contact Us" iconName="fa fa-shield" />
-                          <NavItem path="/credit-card" name=" Rate Compare" iconName="fa fa-tachometer" />
-                          <NavItem path="/identity-protector" name="Blog" iconName="fa fa-shield" />
-                          <NavItem path="/identity-protector" name="Blog" iconName="fa fa-shield" />
-                        </ul>
-
-                        <ul className="nav nav-right">
-                          <li className="sticky-show">
-                            <a
-                              href="/wishlist"
-                            >
-                              <HeartIcon />
-                            </a>
-                          </li>
-                          <li className="sticky-show">
-                            <a
-                              href="/login"
-                            >
-                              <PersonIcon />
-                            </a>
-                          </li>
-                          <li className="sticky-show cart-item">
-                            <a
-                              href="/cart"
-                            >
-                              <ShoppingCart />
-                              <span className="item-count">5</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </Nav>
-                    </Navbar.Collapse>
-                  </Col>
-                </Row>
-              </Navbar>
-            </Col>
-          </Row>
-          {/* show/hide scroll top Top */}
-          {toggleScroll}
-        </Container>
-      </div>
-
-    );
-  }
-}
-
-function ScrollTop() {
-  const scrollUp = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+  }, [screenTypeOne, screenTypeTwo, screenTypeThree, screenTypeFour, screenTypeFive]);
   return (
-    <div className="scroll-top" id="scroll-top">
-      <button type="button" onClick={scrollUp}>
-        <ArrowUp />
-      </button>
-    </div>
+    <Box component="nav" bgcolor="var(--primary)" color="var(--white)">
+      <Box className="container" py="0.5rem">
+        <Box display="flex" justifyContent="space-between" alignItems="center">
+          <CategoryMenu />
+          <Box display="flex" justifyContent="flex-end">
+            <Box display="flex" justifyContent="flex-end">
+              {
+               !isMD && navbarData.slice(limit.min, limit.max).map(({ ...rest }) => (
+                 <NavItem {...rest} key={rest?.name} />
+               ))
+              }
+            </Box>
+            {
+              (navbarData?.length > 7 || limit.max < 7)
+              && (
+              <MoreMenu
+                options={isMD ? navbarData : navbarData.slice(limit.max, navbarData.length)}
+              />
+              )
+            }
+
+          </Box>
+
+        </Box>
+      </Box>
+
+    </Box>
   );
 }
 
-export default MainMenu;
+export default Navbar;

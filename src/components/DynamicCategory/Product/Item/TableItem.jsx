@@ -17,13 +17,13 @@ function Product({
     if (isImg) {
       return setOverOnImg(true);
     }
-    setOver(true);
+    return setOver(true);
   };
   const handleMouseLeave = (isImg) => {
     if (isImg) {
       return setOverOnImg(false);
     }
-    setOver(false);
+    return setOver(false);
   };
   const getCurrentThumbnail = () => {
     if (isOverOnImg) {

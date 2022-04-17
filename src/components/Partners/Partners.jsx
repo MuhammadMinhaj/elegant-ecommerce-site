@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import GroupWorkIcon from '@mui/icons-material/GroupWork';
 import { Box, Grid } from '@mui/material';
 import {

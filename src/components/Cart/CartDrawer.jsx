@@ -8,7 +8,7 @@ import actions from '../../redux/actions';
 import CartProduct from './CartProduct';
 import PriceDetail from './PriceDetail';
 
-const { handleClickToggleDrawer } = actions.appActions;
+const { handleClickToggleCartDrawer } = actions.appActions;
 
 export default function TemporaryDrawer() {
   const { isCartDrawerOpen } = useSelector((state) => state.app);
@@ -19,13 +19,13 @@ export default function TemporaryDrawer() {
         sx={{ zIndex: '99999' }}
         anchor="right"
         open={isCartDrawerOpen}
-        onClose={() => dispatch(handleClickToggleDrawer())}
+        onClose={() => dispatch(handleClickToggleCartDrawer())}
       >
         <Box maxWidth="450px" display="flex" flexDirection="column" justifyContent="space-between" height="100%">
           <Box>
             <Box p="0.5rem" display="flex" justifyContent="space-between" alignItems="center">
               <Typography variant="h5" color="var(--text-head)" sx={{ fontWeight: '600' }}>My Cart</Typography>
-              <IconButton onClick={() => dispatch(handleClickToggleDrawer())}>
+              <IconButton onClick={() => dispatch(handleClickToggleCartDrawer())}>
                 <CloseIcon />
               </IconButton>
             </Box>

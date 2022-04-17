@@ -1,26 +1,20 @@
-// import OldFooter from '../Footer/Footer';
-// import Navbar from '../Header/Navbar/Navbar';
-// import TopMenu from '../Header/TopMenu';
 import CartDrawer from '../Cart/CartDrawer';
 import Footer from '../Footer/NewFooter';
-import NewHeader from '../NewHeader/Header';
+import Header from '../Header/Header';
 import UserLoginModal from '../User/Login/LoginModal';
 import UserSignupModal from '../User/Signup/SignupModal';
+import WishlistDrawer from '../User/WishList/WishListDrawer';
 
 function Layout({ children }) {
   return (
     <>
-
-      <NewHeader />
+      <Header />
       <CartDrawer />
       <UserLoginModal />
       <UserSignupModal />
-      {/* <TopMenu />
-      <Navbar /> */}
+      <WishlistDrawer />
       {children}
-      {/* <OldFooter /> */}
       <Footer />
-
     </>
   );
 }

@@ -55,7 +55,7 @@ const sidenavListsData = [
       },
       {
         name: 'Addresses',
-        path: 'adresses',
+        path: 'addresses',
         icon: <LocationOnSharpIcon />
       },
       {

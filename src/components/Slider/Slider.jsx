@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { Box } from '@mui/material';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import React from 'react';

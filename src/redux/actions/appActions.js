@@ -1,6 +1,8 @@
 import types from '../types';
 
-const { TOGGLE_DRAWER, USER_LOGIN_TOGGLE_MODAL, USER_SIGNUP_TOGGLE_MODAL } = types.appTypes;
+const {
+  TOGGLE_CART_DRAWER, USER_LOGIN_TOGGLE_MODAL, USER_SIGNUP_TOGGLE_MODAL, TOGGLE_WISHLIST_DRAWER
+} = types.appTypes;
 
 const methods = {};
 
@@ -9,9 +11,9 @@ const methods = {};
  * @param {}
  * @return {}
  * * */
-methods.handleClickToggleDrawer = () => (dispatch) => {
+methods.handleClickToggleCartDrawer = () => (dispatch) => {
   dispatch({
-    type: TOGGLE_DRAWER
+    type: TOGGLE_CART_DRAWER
   });
 };
 
@@ -31,6 +33,16 @@ methods.handleClickToggleUserLoginSignupModal = (isLogin) => (dispatch) => {
       type: USER_SIGNUP_TOGGLE_MODAL
     });
   }
+};
+/**
+ * This action is used to toggle the wishlist drawer
+ * @param {}
+ * @return {}
+ * * */
+methods.handleClickToggleWishlistDrawer = () => (dispatch) => {
+  dispatch({
+    type: TOGGLE_WISHLIST_DRAWER
+  });
 };
 
 export default methods;

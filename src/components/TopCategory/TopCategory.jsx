@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import CategoryIcon from '@mui/icons-material/Category';
 import { Box, Grid } from '@mui/material';
 import {
