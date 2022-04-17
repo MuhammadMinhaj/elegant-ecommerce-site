@@ -4,11 +4,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "lint-next": "next lint",
     "lint": "eslint ./src/**/*.{js,jsx}",
     "lint:fix": "yarn lint --fix",
-    "export": "next export"
+    "export": "next export",
+    "heroku-postbuild": "yarn build"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
