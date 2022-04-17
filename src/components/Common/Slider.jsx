@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import {
   A11y, Navigation, Pagination, Scrollbar
 } from 'swiper';
