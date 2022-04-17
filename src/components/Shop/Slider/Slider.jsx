@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { Box } from '@mui/material';
 import { SwiperSlide } from 'swiper/react';
 import Slider from '../../Common/Slider';

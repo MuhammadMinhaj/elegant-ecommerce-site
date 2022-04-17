@@ -21,7 +21,7 @@ function UserReviewItem({
 
             <Typography variant="subtitle1" color="text.secondary">{date}</Typography>
           </Box>
-          <Rating />
+          <Rating readOnly defaultValue={rating || 3} />
 
           <Typography variant="body2" color="text.secondary">{description}</Typography>
         </Box>

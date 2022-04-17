@@ -24,6 +24,8 @@
     "import/no-extraneous-dependencies": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "react/no-danger": 0,
-    "comma-dangle": ["error", "never"]
+    "comma-dangle": ["error", "never"],
+    "no-alert": 0,
+    "max-len": 0
   }
 }
