@@ -19,7 +19,7 @@ function CardItem() {
       >
         <Box display="flex" justifyContent="center">
           <Box p="0.5rem" borderRadius="50%" width="100px" height="100px" border="2px solid var(--secondary)">
-            <Box component="img" src="https://freepikpsd.com/file/2019/10/client-images-png-8-1.png" width="100%" height="100%" />
+            <Box component="img" src="/client-say.png" width="100%" height="100%" />
           </Box>
         </Box>
         <Box py="0.5rem">
