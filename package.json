@@ -8,8 +8,7 @@
     "lint-next": "next lint",
     "lint": "eslint ./src/**/*.{js,jsx}",
     "lint:fix": "yarn lint --fix",
-    "export": "next export",
-    "heroku-postbuild": "yarn build"
+    "export": "next export"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
