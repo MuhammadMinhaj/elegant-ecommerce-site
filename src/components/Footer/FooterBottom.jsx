@@ -8,11 +8,11 @@ function FooterBottom() {
           All Rights Reserved. Copyright © 2022
         </Typography>
         <Typography color="var(--white)" variant="subtitle1">
-          Developer by
+          Designed & Developed By
           {' '}
           <Typography
             component="a"
-            href="http://intelwink.com"
+            href="https://muhammadminhaj.github.io"
             color="var(--white)"
             variant="subtitle1"
             sx={{
@@ -24,7 +24,7 @@ function FooterBottom() {
             }}
             target="_blank"
           >
-            INTELWINK
+            Muhammad Minhaj
           </Typography>
         </Typography>
       </Box>
