@@ -11,7 +11,7 @@ function ContactDetail() {
         <MailIcon />
         <Box width="0.5rem" />
 
-        <Typography variant="subtitle2"> info@gmail.com</Typography>
+        <Typography variant="subtitle2"> programmer.mdminhaj@gmail.com</Typography>
       </Box>
       <Box width="2rem" />
       <Box display="flex" alignItems="center">
@@ -19,7 +19,7 @@ function ContactDetail() {
         <Box width="0.5rem" />
 
         <Typography variant="subtitle2">
-          +00 54 983498543
+          +8801XXXXXXXXX
         </Typography>
       </Box>
     </Box>
