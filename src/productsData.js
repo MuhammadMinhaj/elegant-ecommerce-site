@@ -4,7 +4,7 @@ const productsData = [
     price: 800,
     discount: 15,
     ratings: 3,
-    images: ['/default/product-300x300.png', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
+    images: ['https://www.startech.com.bd/image/cache/catalog/laptop/msi/modern-14-b10mw/modern-14-b10mw-500x500.jpg', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
     path: '/',
     statusText: 'New',
     statusType: 'news'
@@ -14,7 +14,7 @@ const productsData = [
     price: 500,
     discount: 12,
     ratings: 4,
-    images: ['/default/product-300x300.png', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
+    images: ['https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn800-b/27gn800-b-01-228x228.jpg', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
     path: '/',
     statusText: 'Hot',
     statusType: 'hots'
@@ -24,7 +24,7 @@ const productsData = [
     price: 500,
     discount: null,
     ratings: 4,
-    images: ['/default/product-300x300.png', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
+    images: ['https://www.startech.com.bd/image/cache/catalog/casing/antec/nx240/nx240-01-228x228.jpg', 'https://www.startech.com.bd/image/cache/catalog/laptop/razer/blade-15-advanced-model/blade-15-advanced-model-01-228x228.jpg'],
     path: '/',
     statusText: 'Offer',
     statusType: 'offers'
@@ -34,7 +34,7 @@ const productsData = [
     price: 300,
     discount: 10,
     ratings: 5,
-    images: ['/default/product-300x300.png', 'https://www.startech.com.bd/image/cache/catalog/combo/kraken-x-headset-and-deathadder-essential/kraken-x-headset-and-deathadder-essential-228x228.jpg'],
+    images: ['https://www.startech.com.bd/image/cache/catalog/monitor/benq/xl2546k/zowie-xl2546-228x228.jpg', 'https://www.startech.com.bd/image/cache/catalog/combo/kraken-x-headset-and-deathadder-essential/kraken-x-headset-and-deathadder-essential-228x228.jpg'],
     path: '/',
     statusText: null,
     statusType: null
