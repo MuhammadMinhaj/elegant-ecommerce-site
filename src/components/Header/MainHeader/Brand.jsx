@@ -6,7 +6,7 @@ function Barnd() {
   return (
     <Box>
       <Box className="container">
-        <Box component="img" src="/images/site-logo.png" width="200px" height="auto" alt="Brand name" sx={{ cursor: 'pointer' }} onClick={() => router.push('/')} />
+        <Box component="img" src="/images/site-logo.png" width="80px" height="auto" alt="Brand name" sx={{ cursor: 'pointer' }} onClick={() => router.push('/')} />
       </Box>
     </Box>
   );
