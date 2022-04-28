@@ -1,3 +1,8 @@
+/**
+ * @author Muhammad Minhaj <programmer.mdminhaj@gmail.com>
+ * @description The redux store
+ */
+
 // Includes Packages
 import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
