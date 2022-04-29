@@ -1,3 +1,7 @@
+/**
+ * @author Muhammad Minhaj <programmer.mdminhaj@gmail.com>
+ * @description The constant types for communicate between reducers and actions
+ */
 const appTypes = {};
 
 appTypes.TOGGLE_CART_DRAWER = 'TOGGLE_CART_DRAWER';
