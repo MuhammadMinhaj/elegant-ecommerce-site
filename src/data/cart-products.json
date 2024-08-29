@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Lenovo IdeaPad Gaming 3 15ACH6 Ryzen 5 5500H RTX 2050 4GB Graphics 15.6 FHD Laptop",
+    "price": 800,
+    "discount": 15,
+    "ratings": 3,
+    "image": "https://www.startech.com.bd/image/cache/catalog/laptop/msi/modern-14-b10mw/modern-14-b10mw-500x500.jpg",
+    "path": "/",
+    "color": "Silver",
+    "size": "M"
+  },
+  {
+    "id": 2,
+    "title": "Asus Zenbook Pro 14 OLED UX6404VV Core i9 13th Gen RTX 4060 8GB Graphics 14.5 OLED 120Hz Touch Laptop",
+    "price": 500,
+    "discount": 12,
+    "ratings": 4,
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn800-b/27gn800-b-01-228x228.jpg",
+    "path": "/",
+    "color": "Silver",
+    "size": "M"
+  },
+  {
+    "id": 3,
+    "title": "Apple iMac M3 Chip 512GB SSD 24 4.5K Retina Display Green All-in-One PC (Late 2023)",
+    "price": 500,
+    "discount": 10,
+    "ratings": 5,
+    "image": "https://www.startech.com.bd/image/cache/catalog/desktop-pc/desktop-offer/10th-gen-core-i3-10105-custom-desktop-pc-500x500.webp",
+    "path": "/",
+    "color": "Silver",
+    "size": "M"
+  },
+  {
+    "id": 4,
+    "title": "AMD Ryzen 7 5700G Custom Desktop PC",
+    "price": 500,
+    "discount": 10,
+    "ratings": 5,
+    "image": "https://www.startech.com.bd/image/cache/catalog/desktop-pc/desktop-offer/amd-ryzen-7-5700g-custom-desktop-pc-02-500x500.webp",
+    "path": "/",
+    "color": "Silver",
+    "size": "M"
+  }
+]
