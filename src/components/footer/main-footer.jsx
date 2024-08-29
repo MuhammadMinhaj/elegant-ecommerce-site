@@ -13,7 +13,7 @@ import SendIcon from '@mui/icons-material/Send';
 import { Box, Divider, Grid, IconButton, Paper, Typography } from '@mui/material';
 import FooterLayout from './footer-layout';
 
-function Footer() {
+export default function MainFooter() {
   return (
     <Box component="footer" bgcolor="var(--primary)" color="var(--white)">
       <Box className="container" py="3rem">
@@ -228,5 +228,3 @@ function Footer() {
     </Box>
   );
 }
-
-export default Footer;

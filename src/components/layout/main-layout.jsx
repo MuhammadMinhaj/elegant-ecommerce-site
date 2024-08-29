@@ -1,9 +1,9 @@
+import MainFooter from '@/components/footer/main-footer';
+import Header from '@/components/header';
 import UserLoginModal from '@/components/login-modal';
 import UserSignupModal from '@/components/signup-modal';
 import WishlistDrawer from '@/components/wish-list-drawer';
 import CartDrawer from '../cart/cart-drawer';
-import Footer from '../footer/footer';
-import Header from '../header';
 
 function MainLayout({ children }) {
   return (
@@ -14,7 +14,7 @@ function MainLayout({ children }) {
       <UserSignupModal />
       <WishlistDrawer />
       {children}
-      <Footer />
+      <MainFooter />
     </>
   );
 }
